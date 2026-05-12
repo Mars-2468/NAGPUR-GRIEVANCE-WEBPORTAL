@@ -1,0 +1,46 @@
+<IfModule mod_rewrite.c>
+   <IfModule mod_negotiation.c>
+       Options -MultiViews -Indexes
+   </IfModule>
+
+   RewriteEngine On
+ <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|svg)$">
+       Header set Access-Control-Allow-Origin "http://localhost:8081"
+    </FilesMatch>
+   # Handle Authorization Header
+   RewriteCond %{HTTP:Authorization} .
+   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#   RewriteRule ^.*js$ - [F]
+   <Files license.txt>
+    Order allow,deny
+    Deny from all
+    </Files>
+    
+    <Files contributing.md>
+    Order allow,deny
+    Deny from all
+    </Files>
+
+   # Redirect Trailing Slashes If Not A Folder...
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_URI} (.+)/$
+   RewriteRule ^ %1 [L,R=301]
+
+   # Handle Front Controller...
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^ index.php [L]
+</IfModule>
+#Security Headers
+<IfModule mod_headers.c>
+Header Set Strict-Transport-Security: max-age=10886400;
+Header set X-Frame-Options Deny
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+Header set Content-Security-Policy upgrade-insecure-requests;
+</IfModule>
+
+
+# Disable server signature #
+ServerSignature Off
+

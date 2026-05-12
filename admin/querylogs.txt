@@ -1,0 +1,1 @@
+INSERT INTO `widget_mst` (`widget_name`, `widget_type`, `flag`, `langId`, `ulbid`, `user_level`, `widget_admin_code`, `author`) VALUES ('fsdfsd', '6', 1, '1', '300', 'A', 12, 'superadmin')

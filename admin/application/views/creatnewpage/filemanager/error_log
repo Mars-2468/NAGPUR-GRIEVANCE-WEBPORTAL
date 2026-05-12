@@ -1,0 +1,3 @@
+[13-Jun-2018 09:41:24 UTC] PHP Fatal error:  Call to undefined function mb_internal_encoding() in /home2/municipalservce/public_html/ediotr_plugins/filemanager/config/config.php on line 4
+[13-Jun-2018 09:42:32 UTC] PHP Fatal error:  Call to undefined function mb_internal_encoding() in /home2/municipalservce/public_html/ediotr_plugins/filemanager/config/config.php on line 4
+[13-Jun-2018 09:42:52 UTC] PHP Fatal error:  Call to undefined function mb_internal_encoding() in /home2/municipalservce/public_html/ediotr_plugins/filemanager/config/config.php on line 4

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content=":: Nagpur Municipal Corporation">
+
+    <meta name="author" content=":: Nagpur Municipal Corporation">
+
+
+
+    <title>:: Dashboard</title>
+<!-- jQuery (must load before plugin) 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+    <!-- Vendor css -->
+    <link rel="icon" href="<?php echo base_url(); ?>../assets/cdma/TSFC/images/favicon.png" />
+
+    <link href="<?php echo base_url(); ?>assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Shamcey CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/shamcey.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style-91.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/mystyle.css">
+
+    <link href="<?php echo base_url(); ?>assets/lib/medium-editor/medium-editor.css" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/lib/medium-editor/default.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/lib/summernote/summernote-bs4.css">
+
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontawesome/css/all.css">
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-tso.min.js"></script>
+
+ <!--   <script src="<?php //echo base_url(); ?>assets/js/jquery-3.6.0.min.js"></script>
+
+    <link href="<?php //echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+-->
+    <link rel="stylesheet" type="text/css" id="fontsizesheet" href="#">
+
+
+
+
+    <style>
+        .myheaderengs {
+            /* font-family: 'Open Sans', sans-serif; */
+			font-family: 'Poppins', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+            font-size: 23px;
+            margin-top: 36px;
+            font-weight: bold;
+        }
+
+        .myheadertelugu {
+            /* font-family: 'Mallanna', sans-serif; */
+			font-family: 'Poppins', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+            font-size: 38px;
+            font-weight: bold;
+            margin-top: 19px;
+            line-height: 0.8;
+        }
+
+
+
+
+        .myhide {
+            display: block;
+        }
+
+        .hidelang {
+            display: block;
+            padding-top: 20px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .myheadertelugu {
+                /* font-family: 'Mallanna', sans-serif; */
+				font-family: 'Poppins', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+                font-size: 19px;
+                font-weight: 600;
+                margin-top: 19px;
+                line-height: 0.8;
+            }
+
+            .myheadereng {
+                /* font-family: 'Open Sans', sans-serif; */
+				font-family: 'Poppins', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+                font-size: 22px;
+                margin-top: 22px;
+                font-weight: bold;
+            }
+
+            .myhide {
+                display: none;
+            }
+
+            .hidelang {
+                display: none;
+            }
+
+        }
+
+        body {
+            position: initial !important;
+        }
+		
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled,
+.btn.disabled,
+.btn:disabled {
+  cursor: not-allowed !important;
+  /* Bootstrap sets pointer-events: none; override it so cursor shows */
+  pointer-events: auto !important;
+}
+
+    </style>
+<!-- jQuery CDN (optional, only needed if you plan to use jQuery in your script) -->
+
+<script>
+    setInterval(function () {
+        $.ajax({
+            url: "<?= base_url('auth/check_session') ?>",
+            success: function(response) {
+                if (response === "expired") {
+                    alert("Session expired! You will be logged out.");
+                    window.location.href = "<?= base_url('admin/') ?>";
+                }
+            }
+        });
+    }, 900000); // Check every 60 seconds
+</script>
+
+<script>
+   /*  $(window).on('beforeunload', function () {
+        navigator.sendBeacon("<?= base_url('auth/logout_on_close') ?>");
+    }); */
+</script>
+<link 
+  href="<?php echo base_url(); ?>assets/css/bootstrap-fte.min.css" >
+    
+</head>
+
+<body>
+
+<?php echo base_url(); ?>
+
+    <div class="sh-logopanel">
+        <a href="#" class="sh-logo-text"><img src="<?php echo base_url(); ?>../assets/cdma/TSFC/images/ap-logo.png"></a>
+        <a id="navicon" href="#" class="sh-navicon d-none d-xl-block"><i class="fa fa-bars"></i></a>
+        <a id="naviconMobile" href="#" class="sh-navicon d-xl-none"><i class="fa fa-bars"></i></a>
+    </div><!-- sh-logopanel -->
+
+
+
+
+    <div class="sh-sideleft-menu">
+        <label class="sh-sidebar-label">Navigation</label>
+			
+		<div class="accordion accordion-flush bg-dark" id="accordionFlushNav">
+			<div class="accordion-item" style="background-color:#f69e32 !important;">
+				<h6 class="accordion-header text-left ml-2 p-2">
+					 <a href="<?php echo base_url() ?>dashboard" class=" text-white active" style="text-decoration:none !important;">
+						<i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;
+						<span>Dashboard</span>
+					</a>
+				</h6>				
+			</div>
+			
+<!-- given the manage page access for zones -->			
+			
+	<?php if(in_array($_SESSION['userid'],dept_user_ids())){ ?>
+		
+		<div class="accordion-item" style="background-color:#262626 !important;">
+			<h6 class="accordion-header text-left ml-2 p-2">
+				<a href="<?= base_url(); ?>view-pages" class="text-white">
+					<i class="fa fa-tasks"></i>&nbsp;&nbsp;
+						<span>Manage Page</span>
+				</a>
+			</h6> 
+		</div> 
+				
+	  <?php } ?>
+
+            <?php foreach ($main_menu_list as $key => $val) { ?>
+
+                <?php if (is_array($sub_menus[$val['main_menu_id']])) { ?>
+                   
+
+					<div class="accordion-item" style="background-color:#262626 !important;border:0px solid black !important;">
+						<h6 class="accordion-header text-left ml-2 p-1" style="background-color:#262626 !important;border:none !important;">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $key; ?>" aria-expanded="false" aria-controls="flush-collapse<?= $key; ?>" style="background-color:#262626 !important;color:#FFF !important;border:none !important;">
+									<a href="#" style="text-decoration:none;color:#FFF !important;">
+										<i class="<?php echo $val['icon']; ?>"></i>&nbsp;&nbsp;
+										<span> <?php echo $val['main_menu_name']; ?> </span>
+									</a>
+							</button>
+						</h6>
+						<div id="flush-collapse<?= $key ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNav" style="background-color:#000000 !important;color:#FFF !important;">
+						<ul style="list-style-type:none;margin-left:0.5rem !important;height:auto;">
+                            <?php $i = 1;
+							
+                            foreach ($sub_menus[$val['main_menu_id']] as $subMenuId => $submenuValue) { ?>
+
+                                <?php
+                                if ($submenuValue['SubcontrollerName'] == "create-category") {
+                                } else {
+                                ?>
+                                    <li class="accordion-body" style=""><a style="margin-left:0px; text-decoration:none;color:#FFF !important;" href="<?php echo base_url() . $submenuValue['SubcontrollerName']; ?>" ><?php echo $submenuValue['submenuname']; ?></a></li>
+                                <?php
+                                }
+                                ?>
+
+
+
+                            <?php $i++;
+                            } ?>
+						</ul>
+							
+                            <!--------------- custom menus ----------------->
+
+                       </div>
+                    </div>
+
+                    <?php
+
+
+
+
+
+
+                } else {
+
+
+                    if (is_array($custom_menus[$val['main_menu_id']])) {
+                    ?>
+
+
+						<div class="accordion-item" style="border:none !important;">
+							<h6 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $key; ?>" aria-expanded="false" aria-controls="flush-collapse<?= $key; ?>">
+									   <a href="#" style="text-decoration:none;">
+									<i class="<?php echo $val['icon']; ?>"></i>
+									<span> <?php echo $val['main_menu_name']; ?> </span>
+								</a>
+								</button>
+							</h6>
+						
+                     
+                           <div id="flush-collapse<?= $key ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNav">
+						
+                                <?php foreach ($custom_menus[$val['main_menu_id']] as $subMenuId => $submenuValue) { ?>
+
+
+                                     <div class="accordion-body"><a href="<?php echo base_url() . $submenuValue['controller']; ?>" style="text-decoration:none;" ><?php echo $submenuValue['page_name']; ?></a></div>
+
+
+                                <?php } ?>
+                            
+							</div>
+                       </div>
+
+
+                    <?php
+                    } else {
+
+
+
+
+                    ?>
+
+                       <div class="accordion-item">
+							<h6 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $key; ?>" aria-expanded="false" aria-controls="flush-collapse<?= $key; ?>">
+									<a href="<?php echo base_url() . $val['controllerName'] ?>" style="text-decoration:none;">
+										<i class="<?php echo $val['icon']; ?>"></i>
+										<span> <?php echo $val['main_menu_name']; ?></span>
+									</a>
+								</button>
+							</h6>
+                           
+                        </div>
+            <?php }
+                }
+            } ?>
+			
+			
+	
+		</div>
+				
+		
+        <ul class="nav">
+         <!--   <li class="nav-item">
+                <a href="<?php echo base_url() ?>dashboard" class="nav-link active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+	  <?php if(in_array($_SESSION['userid'], dept_user_ids())){ ?>
+		
+		<li class="nav-item">
+			<a href="<?php echo base_url(); ?>view-pages" class="nav-link">
+				<i class="fa fa-tasks"></i>
+					<span>Manage Page</span>
+			</a>
+		</li> 
+	  <?php } ?>
+
+            <?php foreach ($main_menu_list as $key => $val) { ?>
+
+                <?php if (is_array($sub_menus[$val['main_menu_id']])) { ?>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link with-sub">
+                            <i class="<?php echo $val['icon']; ?>"></i>
+                            <span> <?php echo $val['main_menu_name']; ?> </span>
+                        </a>
+                        <ul class="nav-sub">
+                            <?php $i = 1;
+                            foreach ($sub_menus[$val['main_menu_id']] as $subMenuId => $submenuValue) { ?>
+
+                                <?php
+                                if ($submenuValue['SubcontrollerName'] == "create-category") {
+                                } else {
+                                ?>
+                                    <li class="nav-item"><a href="<?php echo base_url() . $submenuValue['SubcontrollerName']; ?>" class="nav-link"><?php echo $submenuValue['submenuname']; ?></a></li>
+                                <?php
+                                }
+                                ?>
+
+
+
+                            <?php $i++;
+                            } ?>
+
+
+
+
+                            --------------- custom menus -----------------
+
+
+
+
+
+
+                        </ul>
+                    </li>
+
+                    <?php
+
+
+
+
+
+
+                } else {
+
+
+                    if (is_array($custom_menus[$val['main_menu_id']])) {
+                    ?>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link with-sub">
+                                <i class="<?php echo $val['icon']; ?>"></i>
+                                <span> <?php echo $val['main_menu_name']; ?> </span>
+                            </a>
+                            <ul class="nav-sub">
+                                <?php foreach ($custom_menus[$val['main_menu_id']] as $subMenuId => $submenuValue) { ?>
+
+
+                                    <li class="nav-item"><a href="<?php echo base_url() . $submenuValue['controller']; ?>" class="nav-link"><?php echo $submenuValue['page_name']; ?></a></li>
+
+
+                                <?php } ?>
+                            </ul>
+                        </li>
+
+
+                    <?php
+                    } else {
+
+
+
+
+                    ?>
+
+                        <li class="nav-item">
+                            <a href="<?php echo base_url() . $val['controllerName'] ?>" class="nav-link">
+                                <i class="<?php echo $val['icon']; ?>"></i>
+                                <span> <?php echo $val['main_menu_name']; ?></span>
+                            </a>
+                        </li>
+            <?php }
+                }
+            } ?>
+			
+			
+            <li class="nav-item">
+                <a href="<?php echo base_url(); ?>social-media-links-page" class="nav-link">
+                    <i class="fa fa-list"></i>
+                    <span>Social Media Links</span>
+                </a>
+            </li>-->
+
+            <!--<li class="nav-item">
+             <a href="<?php echo base_url(); ?>startups-partners" class="nav-link">
+               <i class="fa fa-list"></i>
+               <span>Startups & Partners</span>
+             </a>
+           </li> -->
+		<?php if(!in_array($_SESSION['userid'], dept_user_ids())){ ?>
+	   
+           <li class="nav-item">
+             <a href="<?php echo base_url(); ?>team-details" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>Team Details</span>
+             </a>
+           </li> 
+		<?php } ?>   
+		   <li class="nav-item">
+             <a href="<?php echo base_url(); ?>imp-links" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>Important Links</span>
+             </a>
+           </li>
+		   
+		   <?php //if($_SESSION['has_access']==1){ ?>
+ 		   <li class="nav-item">
+             <a href="<?php echo base_url(); ?>create-post" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>Public Notices</span>
+             </a>
+           </li>
+		   <?php //} ?> 
+		   
+		  
+ 		 <!--  <li class="nav-item">
+             <a href="<?php // echo base_url(); ?>public-notices-cust" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>Public Notices</span>
+             </a>
+           </li> -->
+		   
+		    <?php if(in_array($_SESSION['userid'],super_dev_admin())){ ?>
+ 		   <li class="nav-item">
+             <a href="<?php echo base_url(); ?>all-user-list" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>All Users</span>
+             </a>
+           </li> 
+		     <?php } ?>
+			<li class="nav-item">
+             <a href="<?php echo base_url(); ?>slider-list" class="nav-link">
+               <i class="fa fa-tasks"></i>
+               <span>Slider List</span>
+             </a>
+           </li> 
+		    <?php if($_SESSION['has_access']!=0){ ?>
+				<li class="nav-item">
+					<a href="<?php echo base_url(); ?>encroachment-queries-eq" class="nav-link">
+						<i class="fa fa-tasks"></i>
+						<span>Encroachment Queries</span>
+					</a>
+				</li> 
+			<?php } ?>		   
+        <!-- <li class="nav-item">
+          <a href="<?php echo base_url(); ?>complaint-details" class="nav-link">
+            <i class="fa fa-database"></i>
+            <span>Complaint Details</span>
+          </a>
+        </li>   -->
+
+            <!--<li class="nav-item">-->
+            <!--  <a href="<?php echo base_url(); ?>recent-announcements-text" class="nav-link">-->
+            <!--    <i class="fa fa-tasks"></i>-->
+            <!--    <span>Recent Announcements / Text</span>-->
+            <!--  </a>-->
+            <!--</li>    -->
+
+            <!-- <li class="nav-item">
+          <a href="<?php echo base_url(); ?>schemes-category" class="nav-link">
+            <i class="fa fa-tasks"></i>
+            <span>Schemes Category</span>
+          </a>
+        </li>    -->
+
+            <!--<li class="nav-item">-->
+            <!--  <a href="<?php echo base_url(); ?>agenda_and_minutes_category_year" class="nav-link">-->
+            <!--    <i class="fa fa-tasks"></i>-->
+            <!--    <span>Agenda & Minutes Category Year</span>-->
+            <!--  </a> agenda_and_minutes-->
+            <!--</li>   -->
+
+            <!-- <li class="nav-item">
+          <a href="<?php echo base_url(); ?>schemes-sub-category" class="nav-link">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Schemes Sub Category </span>
+          </a>
+        </li>  -->
+
+            <!-- <li class="nav-item">
+          <a href="<?php echo base_url(); ?>report-category " class="nav-link">
+           <i class="fas fa-file-alt"></i>
+            <span>Reports </span>
+          </a>
+        </li> -->
+         <li class="nav-item">
+                <!-- <a href="<?php //echo base_url(); ?>faq-details" class="nav-link"> -->
+                <a href="<?php echo base_url(); ?>work-orders" class="nav-link" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Work Order</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- <a href="<?php //echo base_url(); ?>faq-details" class="nav-link"> -->
+                <a href="<?php echo base_url(); ?>laq-lcq" class="nav-link" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                    <span>LAQ/LCQ</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?php echo base_url(); ?>faq-details" class="nav-link">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Faqs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?php echo base_url(); ?>logout" class="nav-link">
+                    <i class="fa fa-power-off"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+
+
+        </ul>
+    </div><!-- sh-sideleft-menu -->
+
+
+    <div class="sh-headpanel">
+        <div class="row" style="width:100%;">
+            <!--<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/banners/<?php echo $this->session->userdata('banner'); ?>">-->
+
+            <div class="col-md-8">
+
+                <div class="myheaderengs"> Nagpur Municipal
+                    Corporation<?php //echo $this->session->userdata('ulbtype')
+                                ?> </div>
+
+            </div>
+            <div class="col-md-4 hidelang">
+
+                <?php foreach ($languageList->result() as $languageId => $array) {
+                    if ($array->languageId == $this->session->langId) {
+                        $selLanguage = $array->language_desc;
+                    }
+                }
+                ?>
+                <?php //print_r($languageList->result()); exit;
+                ?>
+                <div style="display:block;">
+                    <?php foreach ($languageList->result() as $languageId => $array) {  ?>
+                        <input type="button" value="<?php echo $array->language_desc; ?>" class="btn btn-default <?php if ($this->session->userdata('btncolor') == $array->languageId) {
+                                                                                                                        $clsstring = "btn-primary";
+                                                                                                                    } else {
+                                                                                                                        $clsstring = "";
+                                                                                                                    }
+                                                                                                                    echo $clsstring; ?> btn-xs " id="id<?php echo $array->languageId ?>" onclick="changeLanguage(<?php echo $array->languageId; ?>)"> &nbsp;&nbsp;&nbsp;
+                    <?php   }   ?>
+                </div>
+
+                <div style=" display:block;">Language Selected : <strong><span id="lang"><?php echo $selLanguage; ?></span> </strong></div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div><!-- sh-headpanel-left -->
+
+    <!-- <div class="sh-headpanel-right">
+       
+       
+       
+      </div> sh-headpanel-right -->
+    </div><!-- sh-headpanel -->
+
+    <div class="sh-mainpanel">
+        <div>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    <li class="breadcrumb-item text-right" aria-current="page"><strong>User name:</strong>
+                        <?php echo $this->session->userdata('username'); ?> <?php echo $this->session->userdata('user_type'); ?></li>
+                </ol>
+            </nav>
+
+
+
+
+        </div><!-- sh-breadcrumb -->
+
+
+        <div style="width:100%;">
+            <div style="width:50%; text-align:left; padding-left: 18px; padding-top:15px;"> </div>
+            <div style="width:100%; text-align:right">
+
+            </div>
+
+            <!--    <label>Select Language</label>-->
+            <!--<div id="google_translate_element"></div>-->
+            <!--   <script type="text/javascript">-->
+            <!--        function googleTranslateElementInit() {-->
+            <!--         new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'bn,en,gu,hi,kn,ml,mr,pa,ta,te,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');-->
+            <!--     }-->
+            <!--  </script>-->
+            <!--  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+        </div>
+        <!-- sh-pagetitle -->

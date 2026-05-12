@@ -1,0 +1,1 @@
+INSERT INTO `album_mst` (`ulbid`, `album_desc`, `author`, `lastUpdatedBy`, `Date`) VALUES ('300', 'Water Event', 'Super Admin', 'Super Admin', '2025-09-10')
