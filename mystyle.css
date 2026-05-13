@@ -1,0 +1,797 @@
+
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table{
+    font-size:14px;
+}
+
+.logo_style{
+	margin-left: -30px;
+	position: relative;
+    top: 15px;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.logo_style{
+	margin-left: -27px;
+	position: relative;
+    top: 23px;
+}
+}
+
+
+.top_bar{
+	background-color: #f0f0f0;
+	padding-top: 6px;
+    padding-bottom: 5px;
+}
+.minus {
+    position: absolute;
+    font-size: 8px;
+    right: 5px;
+    top: 4px;
+}
+.plus {
+    position: absolute;
+    font-size: 10px;
+    right: 5px;
+    top: 4px;
+}
+a.btn.btn-default.btn-cwhite {
+    background: #ffffff !important;
+}
+.btn-cblack {
+    background: #333333 !important;
+	color: #fff;
+}
+.btn-cblack:hover {
+    background: #333333 !important;
+	color: #fff;
+}
+.icons-social .GoT-btn-Font .btn.btn-default {
+    background: #cccccc;
+    margin: 0;
+    border: 1px solid #888888;
+    border-top: 0;
+    border-right: 0;
+    font-size: 11px;
+}
+.mybtn{
+	border-radius: 0px !important; 
+}
+.new{
+	background-color: #d4d2d3;
+	border-left: 6px solid #ee5f01;
+	padding: 5px 14px;
+	color: #155263;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+}
+.new_text{
+	background-color: #fff;
+	padding: 5px 14px;
+}
+.pad_left{
+	padding-left:  0px;
+}
+.bod_right{
+	    border-right: 2px solid #ff6f3c;
+}
+
+.pad_bot{
+	padding-top: 46px;
+}
+.pad_right{
+	padding-right:  0px;
+}
+@media only screen and (max-width: 768px) {
+    .pad_left{
+	   padding-left:  15px;
+}
+    .bod_right{
+	    border-right: 0px;
+	    padding-bottom: 8px;
+}
+    .pad_bot{
+	  padding-top: 36px;
+}
+	.pad_right{
+	  padding-right:  15px;
+	  padding-bottom: 15px;
+}
+}
+
+
+.left_content{
+	float:left; 
+}
+.right_content{
+	float:right;
+}
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	height:50%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #009abc;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+.pad_in{
+	padding: initial;
+}
+.content1{
+	color: #0a4f9c;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+	margin-top: -5px;
+}
+.content2{
+	color:#000;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: -9px;
+    margin-bottom: 6px;
+}
+
+.content3{
+	color:#227066;
+	font-weight: 600;
+    font-size: 16px;
+	font-family: 'Titillium Web', sans-serif;
+}
+.content4{
+	color:#4d4d4d;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15px;
+    border-top: 1px solid #ccc;
+	margin-top: 5px;
+    padding: 2px;
+    
+}
+.bg2{
+	border-bottom: 1px solid #ccc;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #fff;
+}
+
+.pad_list{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.bg3{
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.content5{
+	color: #f06203;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+}
+.content6{
+	color: #5c5c5c;
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+	font-size: 13px;
+	line-height: 1.8;
+}
+.content7{
+	color: #f6474c;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	padding-top: 10px;
+	font-size:14px;
+	
+}
+.services{
+	position: relative;
+    margin-bottom: 10px;
+}
+.services_footer{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding: 4px;
+}
+.content8{
+	color: #fff;
+    font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	padding-left: 10px;
+}
+.background_pic{
+	background-image: url("assets/img/tourism.jpg");
+	height: 289px;
+	margin-top: 10px;
+	padding: 60px 25px;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+   .background_pic{
+	background-image: url("assets/img/tourism.jpg");
+	height: 289px;
+	margin-top: 10px;
+	padding: 60px 54px;
+	background-repeat: no-repeat;
+	background-position: center;
+}  
+}
+
+.content9{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: 300;
+	font-size:25px;
+}
+.content_style{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: 600;
+	font-size: 26px;
+}
+.heading1{
+	color: #147dc8;
+    font-weight: 700;
+    font-size: 16px;
+	border-top: 1px solid #f43d45;
+	padding-top: 8px;
+    padding-bottom: 16px;
+}
+.expand_button{
+	border-radius: 0px;
+    background-color: #e8751a;
+    color: #fff;
+}
+.share_button{
+	border-radius: 0px;
+    background-color: #8a1253;
+    color: #fff;
+}
+.icon_size{
+	font-size:15px;
+	padding-top:5px;
+}
+.img_width{
+	width:100%;
+}
+.space{
+	margin-top: 40px;
+}
+.map{
+	margin-top: 5px;
+	position: relative;
+}
+.map_footer{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #22559c;
+    padding: 4px;
+}
+.heading2{
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+     width: auto !important; 
+}
+.bg4{
+	padding-top: 15px;
+}
+.bod{
+	border:1px solid #ccc;
+}
+
+.social_facebook{
+	background: #696767;
+    border-color: transparent;
+    padding: 5px;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 0px;
+    margin-left: 2px;
+}
+.social_facebook:hover{
+	background: #3B5999;
+	border-color: #3B5999;
+}
+.social_twitter{
+	background: #696767;
+    border-color: transparent;
+    padding: 5px;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 0px;
+    margin-left: 2px;
+}
+.social_twitter:hover{
+	background: #00bffe;
+	border-color: #00bffe;
+}
+.social_youtube{
+	background: #696767;
+    border-color: transparent;
+    padding: 5px;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 0px;
+    margin-left: 2px;
+}
+.social_youtube:hover{
+	background: #C32F2A;
+	border-color: #C32F2A;
+}
+.s_icon{
+	color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+   .list-unstyled li {
+    margin-top: 10px;
+}
+
+.ft-links{
+	padding-left: 0;
+    padding-right: 0;
+}
+.pad_links{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.bg5{
+	font-size: 13px;
+    padding-top: 15px;
+	background-color: #eeee;
+}
+.footer_content{
+	color: #131313;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+    font-weight: 600;	
+}
+.footer_content1{
+	color: #131313;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15px;
+    font-weight: 600;
+	
+}
+.social{
+	background-color: #333;
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+.font_buttons{
+	display: block;
+}
+.slider_content{
+	color:#fff;
+}
+.slider_style{
+	margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+@media only screen and (max-width: 768px) {
+    .slider_style{
+	margin-top: 21px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+	.slider_content{
+	color:#fff;
+	display: none;
+}
+	.font_buttons{
+	display: none;
+}
+	.social{
+	background-color: #333;
+	padding-top: 5px;
+    padding-bottom: 5px;
+	height:47px;
+}
+}
+.top_bar1 .col-xs-12{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.slider_center{
+	text-align: -moz-center;
+	text-align: -webkit-center;
+}
+.search_style{
+	padding-right: 0px;
+    padding-top: 30px;
+	display: block;
+}
+@media only screen and (max-width: 768px) {
+	.search_style{
+	padding-right: 0px;
+    padding-top: 30px;
+	display: none;
+}
+}
+
+
+.height{
+    height: 35px;
+    display:none;
+}
+
+@media only screen and (max-width: 768px) {
+    .height{
+    height: 35px;
+    display:block;
+}
+}
+
+.box1{
+    background-color:#ffe6eb;
+    min-height:88px;
+}
+
+.box2{
+    background-color:#d2ebcd;
+    min-height:83px;
+}
+
+@media only screen and (max-width: 768px) {
+    .box1{
+    background-color:#ffe6eb;
+    min-height:80px;
+}
+
+.box2{
+    background-color:#d2ebcd;
+    min-height:81px;
+}
+}
+
+.btn-default {
+    border-color: #fff !important;
+}
+
+.caption_style{
+    right: 0;
+    left: auto;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    bottom: 0%;
+    width: 35%;
+}
+
+.telugu_btn{
+    border-radius:0px;
+}
+
+ /* about page style */
+ 
+ .sub_style{
+     padding-top:30px;
+ }
+ 
+ .bg6{
+     padding-top:20px;
+     padding-bottom:20px;
+ }
+ .img_style{
+     margin:0px auto;
+ }
+ 
+ .about_content6{
+	color: #5c5c5c;
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+	font-size: 13px;
+	line-height: 1.8;
+	padding-bottom: 10px;
+}
+.about_content7{
+	color: #f6474c;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	padding-top: 10px;
+	padding-bottom: 13px;
+	
+}
+.table_style{
+    width:75%;
+}
+.about_content5{
+	color: #f06203;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom:10px;
+	text-align:left;
+}
+
+
+/*color*/
+
+ button#blue {
+    background: #3379e4;
+    padding: 11px 6px 3px 7px;
+    border: solid 1px #fff;
+}
+button#orange {
+    background: #e8751a;
+    padding: 11px 6px 3px 7px;
+    border: solid 1px #fff;
+}
+button#red {
+    background: #388e3c;
+    padding: 11px 6px 3px 7px;
+    border: solid 1px #fff;
+}
+
+.select_color{
+    padding-top:3px;
+}
+
+
+
+
+
+/* Side Menu */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	/*color: #b63b4d;*/
+	text-decoration: none;
+}
+
+/** =======================
+ * Contenedor Principal
+ ===========================*/
+h1 {
+ 	color: #FFF;
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	text-align: center;
+ 	margin-top: 80px;
+ }
+
+h1 a {
+ 	color: #c12c42;
+ 	font-size: 16px;
+ }
+
+ .accordion {
+ 	width: 100%;
+ 	max-width: 360px;
+ 	/*margin: 30px auto 20px;*/
+ 	background: #FFF;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+ 	border: 1px solid #ccc;
+ 	margin-bottom: 10px;
+ }
+ 
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 10px 15px 8px 20px;
+	color: #4D4D4D;
+	font-size: 14px;
+	/*font-weight: 700;*/
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 14px;
+}
+
+.accordion li.open .link {
+	color: #b63b4d;
+}
+
+.accordion li.open i {
+	color: #b63b4d;
+}
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.accordion li.default .submenu {display: block;}
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ .submenu li {
+ 	border-bottom: 1px solid #4b4a5e;
+ }
+
+ .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	background: #3379e4;
+ 	color: #FFF;
+ }
+
+.logo_top{
+
+
+margin-top: 27px;
+padding-left: 0px;
+margin-left: -54px;
+
+
+}
+.logo_content{
+    font-size: 24px;
+    font-weight: 700;
+    color:#000;
+    font-family: 'Titillium Web', sans-serif;
+    /*margin-top: -2px;*/
+}
+
+.telugu_content{
+   font-size:26px; font-family: 'Mallanna', sans-serif; font-weight:bold;
+   color:#000;
+}
+.sub_content{
+    font-size: 17px;
+    font-weight: 400;
+    color:#3c3c3c;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo_top{
+    margin-bottom: -15px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.logo_content{
+    font-size: 13px;
+    font-weight: 700;
+    color:#000;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.telugu_content{
+    font-size: 18px;
+    color:#000;
+    font-family: 'Mallanna', sans-serif;
+}
+.sub_content{
+    font-size: 11px;
+    font-weight: 400;
+    color: #3c3c3c;
+    font-family: 'Titillium Web', sans-serif;
+    display:none;
+}
+}
+
