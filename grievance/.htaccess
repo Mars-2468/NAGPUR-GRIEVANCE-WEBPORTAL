@@ -1,0 +1,29 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+<IfModule mod_headers.c>
+Header Set Strict-Transport-Security: max-age=10886400; 
+Header set X-Frame-Options Deny
+Header always edit Set-Cookie (.*) "$1; HTTPOnly; Secure;"
+Header set Access-Control-Allow-Origin "https://mh.nagpurnmc.in" 
+Header set X-XSS-Protection "1; mode=block"
+#Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options nosniff
+#Header set Content-Security-Policy "default-src 'self'"
+Header set Content-Security-Policy upgrade-insecure-requests;
+# Disable server signature #
+ServerSignature Off
+</IfModule>

@@ -1,0 +1,54 @@
+<link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+    $('#example').dataTable();
+    });  </script>
+
+   <table border="1" id="example" class="table">
+    <thead>
+  
+  <tr class="mytr_bgcolor">
+    <th height="30" class="mytr_bgcolor" align="center"><strong>Sl.No</strong></th>
+    <th height="30" class="mytr_bgcolor" align="center"><strong>ULB name</strong></th>
+    <th align="center"><strong> Total No. of HHs in all wards </strong></th>
+    <th align="center"><strong> Total No. of Wards in ULB </strong></th>
+    <th align="center"><strong> No. of Wards Selected for 100% Coverage </strong></th>
+    <th align="center"><strong> No. of House holds covered with D2D </strong></th>
+    <th align="center"><strong> % of House hold covered </strong></th>
+    <th align="center"><strong> Whether 100% door to door garbage collection is implemented (Yes/No) </strong></th>
+    
+  </tr>
+  </thead>
+  <tbody>
+ 
+  <?php $i=1;foreach($ulb_list2 as $key=>$val){?>
+  <tr height="20">
+    <td class="ulb_colr" align="center"><?php echo $i; ?></td>
+    <td class="ulb_colr"  height="20" align="center"><?php echo $val; ?></td>
+    <td  align="center"><?php echo $data[$key]['no_of_house_holds']; ?></td>
+    <td  align="center"><?php echo $data[$key]['no_wards']; ?></td>
+    <td align="center"><?php echo $data[$key]['no_wards_100_coverage']; ?></td>
+    <td  align="center"><?php echo $data[$key]['no_hhs_covererd_d2d']; ?></td>
+    <td  align="center"><?php echo $data[$key]['per']; ?></td>
+    <td  align="center"><?php echo $data[$key]['d2d_100_garbage_collected']; ?></td>
+    
+  </tr>
+ 
+  <?php $i++; }?>
+ 
+  <tr>
+     <td>&nbsp;</td>
+    <td>Total</td>
+    <td align="center"><?php echo $tot['no_of_house_holds']; ?></td>
+    <td align="center"><?php echo $tot['no_wards']; ?></td>
+    <td align="center"><?php echo $tot['no_wards_100_coverage']; ?></td>
+    <td align="center"><?php echo $tot['no_hhs_covererd_d2d']; ?></td>
+    <td align="center"><?php echo $tot['per']; ?></td>
+    <td>&nbsp;</td>
+  </tr>
+   </tbody>
+  </table>

@@ -1,0 +1,237 @@
+{include file='header.tpl'}
+
+<br><br>
+<div class="" style="margin-top: -45px;">
+    
+    
+    <div class="boxed">
+        <div class="title-bar blue"><h4>Employee name: {$emp_list[$emp_id]}</h4></div>
+        <div class="inner no-radius">
+            
+            
+ 
+ <div style="text-align:right;"><a href="dept_empwise.php?app_type_id=1&dept_id={$dept_id_sel}&status=0" class="btn btn-warning" onclick="history.go(-1);"><i class="fa fa-backward"></i> Back</a></div>
+           
+           
+           
+            
+            
+            <div  id="div_print" style="border:#999999 0px solid;">
+<CENTER><strong>VIEW {if $app_type_id eq '1'} COMPLAINTS {else} SERVICE{/if} DETAILS</strong></CENTER>
+
+</br></br>
+
+
+    <div style="width:100%;  margin-top:40px;">
+          <div  id="area">
+	    <table width="100%" border="1" cellspacing="0" cellpadding="0" class="display table-bordered table-striped table-condensed cf" id="data-table">
+	    <thead>
+	      <tr style="background-color:#2c3e50; color:#FFF;">
+		<th align="center" valign="middle">S.No</th>
+		<th align="center" valign="middle">Reference No</th>
+		<th align="center" valign="middle">Name & Mobile</th>
+		<th align="center" valign="middle">Adress</th>	
+		<th align="center" valign="middle">{if $app_type_id eq '1'} COMPLAINTS {else} SERVICE{/if} Details</th>		
+		<th align="center" valign="middle">Status</th>
+		<th align="center" valign="middle">Received Date</th>
+	    <th align="center" valign="middle" colspan="2">Actions</th>		
+	    </tr>
+	    </thead>
+		<tbody>
+		{assign var="i" value=$firstNumber+1}
+		{foreach from=$data key=grievance_id item=row}
+		<tr>
+			<td>{$i}</td>
+			
+		{assign var="i" value=$i+1}
+			<!--<td>{$dept_list[$row.dept_id]}</td>-->
+			<td align="center"><a href="view_comp_det_admin.php?grievance_id={$grievance_id}">{$grievance_id}</a></td>
+			<td>{$row.person_name} ({$row.mobile})</td>
+			
+			<td>{$row.hno},{$row.address}</td>
+			
+			<td>{if $app_type_id eq '2'}{$cs_list[$row.mcat3_id]}{else}{$cs_list[$row.cat3_id]}{/if}</td>
+			
+			<td>{$status_list[$row.grievance_status_id]}</td>
+			<td>{$row.date_regd|date_format:"%d-%m-%Y %H:%M:%S"}</td>
+			
+			
+			
+			
+		
+			<td>
+			{if $ulbid eq '207'}
+			{if $row.app_type_id eq '2'}
+			<a href="receive_print_boduppal.php?gid={$grievance_id}&aptid={$row.app_type_id}" target="">Receipt</a>
+			{else}
+			<a href="receive_print_boduppal.php?gid={$grievance_id}&aptid={$row.app_type_id}" target="">Receipt</a>
+			{/if}
+			
+			{else}
+			{if $row.app_type_id eq '2'}
+			<a href="receive_print.php?gid={$grievance_id}&aptid={$row.app_type_id}" target="">Receipt</a>
+			{else}
+			<a href="receive_print.php?gid={$grievance_id}&aptid={$row.app_type_id}" target="">Receipt</a>
+			{/if}
+			{/if}
+			
+			{if $row.grievance_status_id eq '2' && ($is_level3_emp eq 1 || $is_level2_emp eq 1)}
+			
+			
+			<form action="manage_comp_sel.php" method="post">
+			    <input type="hidden" name="grievance_id" value="{$grievance_id}">
+			    <input type="submit" name="update" value="Update" class="btn btn-primary btn-sm">
+			</form>
+	
+			
+			{/if}
+		
+			</td>
+		</tr>
+		{/foreach}
+		</tbody>
+	    
+	  </table>
+ </div>
+
+</div>
+            
+            
+            
+            
+            
+        </div>
+        
+    </div>
+    
+    
+    
+ 
+ 
+ 
+ </div>
+
+
+
+
+
+
+<!--<div align="right"><a href="#" ><button class="btn btn-warning" onclick="history.go(-1);"><i class="fa fa-backward"></i> Back</button></a></div>-->
+
+
+
+
+
+{include file='footer_print.tpl'}
+
+<div style="width:100%; text-align:center">
+    
+    
+   <!-- <form action="exporttoexcel.php" method="post">
+<input type="hidden" name="app_type_id" value="{$app_type_id}"> 
+<input type="hidden" name="emp_id" value="{$emp_id}">
+<input type="hidden" name="status" value="{$status}">
+<input type="hidden" name="dept_id" value="{$dept_id}">
+
+
+<input type="submit" name="excel" value="export All excel" class="btn btn-warning">
+</form>-->
+    
+</div>
+<!--<center>
+ 	<input type="button" onclick="tableToExcel('example', 'Sheet')" value="Export to Excel" class="btn btn-success">
+	<input type='button' value='Print' onclick="print_div()" class="btn btn-danger">
+</center>-->
+{literal}
+<style>
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAAADD;
+	
+	text-decoration: none; /* no underline */
+	color: #000099;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #000099;
+
+	color: #000;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+		border: 1px solid #000099;
+		
+		font-weight: bold;
+		background-color: #000099;
+		color: #FFF;
+	}
+	div.pagination span.disabled {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #EEE;
+	
+		color: #DDD;
+	}
+	
+</style>
+
+
+
+
+
+{/literal}
+
+<center>
+<div id="pagination" class="pagination" align="center">{$pagination}</div>
+</center> 
+<div style="width:100%; text-align:center">
+    
+    
+    <form action="exporttoexcel.php" method="post"> 
+			<input type="hidden" name="app_type_id" value="1"> 
+			<input type="hidden" name="emp_id" value="">
+			<input type="hidden" name="status" value="">
+			<input type="hidden" name="dept_id" value="">
+
+
+<input type="submit" name="excel" value="export All excel..." class="btn btn-warning">
+</form>
+    
+</div>
+<br>
+{include file='footer.tpl'}
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+    changeMonth: true,
+    changeYear: true});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

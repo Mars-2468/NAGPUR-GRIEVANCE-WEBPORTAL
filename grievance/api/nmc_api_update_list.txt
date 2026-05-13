@@ -1,0 +1,64 @@
+============================================
+CHAMGES DONE SET LAG ID 1
+============================================
+     getdept.php
+	 getdept_service.php
+	 getemp.php
+	 getimp_contacts.php
+	 getimp_dept.php
+	 getstreets.php
+	 getwards.php
+	 grievanceStatusChartApi.php
+	 hodreport.php
+	 insert_grv.php
+	 insert_tanker_req.php
+	 kiosk_category.php
+	 kiosk_cs_status.php
+	 kiosk_cs_status_mob.php
+	 kiosk_sub_category.php
+	 know-service-person.php
+	 know-service-person2.php
+	 know-service-person_enc.php
+	 know_serv_person.php
+	 know_serv_person2.php
+	 media_cover_data.php
+	 media_coverage.php
+	 media_coverage_data.php
+	 notifica.php
+	 notifications.php
+	 notify.php
+	 public_rep_info.php
+	 public_rep_info_latest.php
+	 public_representatives.php
+	 public_representatives_info.php
+	 publicrep_info.php
+	 servece_info2.php
+	 servece_list.php
+	 service_dashboard.php
+	 service_info.php
+	 service_info2.php
+	 service_list.php
+	 servicedetails.php
+	 sub_cat.php
+	 sub_category.php
+	 sub_category_dropdown.php
+	 sub_category_latest.php
+===============================================================	 
+	 No changes done below files
+===============================================================
+	 insert_drain_ugd.php
+	 insert_grv_2021_04_16
+	 insert_grv_test.php
+	 insert_Maintenance_IEC.php
+	 insert_Maintenance_IEC1.php
+	 insert_Septic_tanks.php
+	 insert_smart_idea.php
+	 localapitest.php
+	 mediacvr.php
+	 nearest_lat_lngs.php
+	 post-grievance.php
+	 property_tax_due_api.php
+	 rating.php
+	 rating_latest.php
+	 smstesting.php
+	 tanker_list.php

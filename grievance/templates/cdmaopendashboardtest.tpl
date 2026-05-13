@@ -1,0 +1,447 @@
+{include file='openheader.tpl'}
+<!--<meta http-equiv="Refresh" content="60"> -->
+
+{literal}
+<style>
+.bash_heading{
+	border-top: 1px solid #D5DDDF;
+    text-align: left;
+    padding: 10px !important;
+    background-color: #fff;
+	clear:both;
+	font-weight:bold;
+	font-size:16x;
+	color:#000;
+	}
+	.geo_style a {
+	    padding:6px;
+	    color:blue !important;
+	    font-size:18px !important;
+	    font-weight:bold;
+	}
+
+</style>
+<script>
+$(document).ready(function(){
+    myVar = setInterval("showTime()", 40000);
+        //showTime();
+        
+    });
+    
+    function showTime()
+    {
+        $.post('timer.php',{},function(data)
+        {
+        //$("#firstlink").hide();
+        //$("#firstlink2").hide();
+        $.post('timer.php',{},function(data)
+        {
+           
+          if(data==1)
+          {
+               $("#loading").css('display','block');
+        $("#result").html('');
+               $.post('ajax_complaint_opn_dashboard.php',{},function(data)
+        {
+          
+            $("#loading").css('display','none');
+            $("#result").html(data);
+            
+        });
+          }
+          else if(data==2)
+          {
+              $("#loading").css('display','block');
+                $("#result").html('');
+                $.post('ajax_service_opn_dashboard.php',{},function(data)
+                {
+                    $("#loading").css('display','none');
+                    $("#result").html(data);
+                    
+                   
+                });
+                
+                
+                
+                
+                
+                
+          }
+          else if(data==3)
+          {
+              $("#result").html('');
+              $("#firstlink").show();
+              $("#firstlink2").hide();
+               
+          }
+          else if(data==4)
+          {
+              $("#result").html('');
+              $("#firstlink").hide();
+              $("#firstlink2").show();
+               
+          }
+          
+        });
+    });
+    }
+    
+  
+$(document).ready(function()
+{
+    var user_type = $("#user_type").val();
+   
+    $("#loading").css('display','block');
+    if(user_type == 'M')
+    {
+        $.post('ajax_complaint_mepmadashboard.php',{},function(data)
+        {
+          //alert(data);
+            $("#loading").css('display','none');
+            $("#result").html(data);
+        });
+    }
+    else
+    {
+    
+        $.post('ajax_complaint_opn_dashboard.php',{},function(data)
+        {
+          //alert(data);
+            $("#loading").css('display','none');
+            $("#result").html(data);
+        });
+    }
+    
+    
+});
+function get_dists(rdmaid)
+{
+	$.post('ajax_getdists.php',{rdmaid:rdmaid},function(data)
+	{
+		$("#distid").html(data);
+	});
+}
+
+
+function get_ulbs(distid)
+{
+	$.post('ajax_getulbs.php',{distid:distid},function(data)
+	{
+		$("#ulbid").html(data);
+	});
+}
+
+function fun12(user_type,ulbid)
+{
+   
+    
+    $.post("ajax_reopened_report.php",{cat_id:0,user_type:user_type,ulbid:ulbid},function(data)
+    {
+        //alert(data);
+        $("#result").html(data);
+        $("#result").css('display','block');
+        $("#tabsdata").css('display','none');
+    });
+}
+
+
+
+function fun1(app_type_id)
+{
+   
+    if(app_type_id==1)
+    {
+        $("#loading").css('display','block');
+        $("#result").html('');
+    $.post('ajax_complaint_opn_dashboard.php',{},function(data)
+    {
+        $("#loading").css('display','none');
+        $("#result").html(data);
+    });
+    }
+    else if(app_type_id==2)
+    {
+        
+        $("#loading").css('display','block');
+        $("#result").html('');
+        $.post('ajax_service_opn_dashboard.php',{},function(data)
+        {
+            $("#loading").css('display','none');
+            $("#result").html(data);
+        });
+    }
+    else if(app_type_id==3)
+    {
+        
+        $("#loading").css('display','block');
+        $("#result").html('');
+        $.post('ajax_originwisedashboard.php',{},function(data)
+        {
+            $("#loading").css('display','none');
+            $("#result").html(data);
+        });
+    }
+    
+    else if(app_type_id==4)
+    {
+        //alert();
+        $("#loading").css('display','block');
+        $("#result").html('');
+        $.post('ajax_total_dashboard.php',{},function(data)
+        {
+            $("#loading").css('display','none');
+            $("#result").html(data);
+        });
+    }
+        
+}
+
+
+</script>
+
+
+
+
+
+
+{/literal}
+
+  <!-- Breadcrumbs Start -->
+
+  <!-- Breadcrumbs End -->
+  
+  
+  
+ <!-- {if $ulb eq '208' || $ulb=='210' || $ulb=='3'}
+  <form action="ajax_dashboard.php" method="post">
+  <div class="row">
+      <div class="col-md-4">
+          <label for="village">Select Village :</label>
+          <select name="ulbid"  class="form-control">
+              <option value="">--select--</option>
+              {html_options options=$villages selected=$ulb}
+          </select>
+      </div>
+      <div class="col-md-2" style="margin-top: 25px;">
+          <input type="submit" value="Get Report" class="btn btn-success" name="setVillage">
+      </div>
+  </div>
+  </form>
+  </br></br>
+  
+  {/if}-->
+  <div class="row">
+                
+                <div>
+                <div class="nav-tabs-custom">
+			<ul class="navs nav-tabs panel-info" style="background-color: #ccf4ff;">
+				<li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true" onclick="fun1('1')">Dashboard</a></li>
+				{if $uid neq 'mepma'}
+				<!--<li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false" onclick="fun1('2')">Services</a></li>-->
+			<!--	<li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false" onclick="fun1('3')">Origin Wise</a></li>
+				<li class=""><a href="#" data-toggle="tab" aria-expanded="false" onclick="fun12('{$user_type}','{$ulb}')">Re-opened report</a></li>-->
+				{/if}
+				
+				{if $uid eq 'mepma'}
+				<li class="geo_style" style="float:right !important;"><a href="http://tsurbandashboard.in/ulb_basic_info.php?sub_cat_id=575" target="_blank">Geographical Dashboard</a></li>
+				{/if}
+				{if $user_type eq 'A'}
+				
+				
+				{/if}
+				
+			</ul>
+			<div id="loading" style="display:none; text-align:center;">
+			   <!-- <div style="text-align:center;"><img src="images/loading.gif"/></div>-->
+			    <h4>Please Wait.. </h4>
+			    
+			</div>
+			<span id="result"></span>
+			<input type="hidden" id="user_type" value="{$user_type}">
+			
+		
+                
+                
+                
+               
+        
+        
+        
+        
+        
+<!--<div class="">
+						      <div class="boxed">
+                                 <!-- Title Bart Start --
+								<div class="title-bar white">
+								  <h4>Service Mapping Report</h4>
+								 
+								</div>
+								<!-- Title Bart End --
+                                 <div class="inner no-radius">
+										
+					<table class="display table-bordered table-striped table-condensed cf" width="100%">
+				<thead>
+					<tr style="background-color:#2c3e50; color:#FFF;">
+						<th>Sno</th>
+						<th>Total</th>
+						<th>Mapped</th>
+						<th>Not Mapped</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Services</td>
+						<td><a href='statistics.php?cs_type_id=2&code=0'>{$map.2.total_services}</a></td>
+						<td><a href='statistics.php?cs_type_id=2&code=1'>{$map.2.total_services_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=2&code=2'>{$map.2.total_services_not_mapped}</a></td>
+						
+					</tr>
+					<!--<tr>
+						<td>Complaints</td>
+						<td><a href='statistics.php?cs_type_id=1&code=0'>{$map.1.total_services}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=1'>{$map.1.total_services_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=2'>{$map.1.total_services_not_mapped}</a></td>
+						
+					</tr
+				</tbody>
+				
+				</table>		
+											
+                               
+                                 </div>
+                              </div>
+						   </div>-->
+						   
+						   
+						    <!-- <div class="">
+						      <div class="boxed">
+                                 <!-- Title Bart Start --
+								<div class="title-bar white">
+								  <h4>Complaints Mapping Report</h4>
+								 
+								</div>
+								<!-- Title Bart End
+                                 <div class="inner no-radius">
+										
+					<table class="display table-bordered table-striped table-condensed cf" width="100%">
+				<thead>
+					<tr style="background-color:#2c3e50; color:#FFF;">
+						<th>Sno</th>
+						<th>Total</th>
+						<th>Mapped</th>
+						<th>Not Mapped</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Complaints</td>
+						<td><a href='statistics.php?cs_type_id=1&code=0'>{$map.total_complaints}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=1'>{$map.total_complaints_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=2'>{$map.total_complaints_not_mapped}</a></td>
+						
+					</tr>
+					<tr>
+						<td>Complaints</td>
+						<td><a href='statistics.php?cs_type_id=1&code=0'>{$map.1.total_services}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=1'>{$map.1.total_services_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=2'>{$map.1.total_services_not_mapped}</a></td>
+						
+					</tr
+				</tbody>
+				
+				</table>		
+											
+                               
+                                 </div>
+                              </div>
+						   </div>-->
+        
+        
+        
+        	{if $ulbid eq '052'}
+		<div class="row">
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                            <a href="http://mckarimnagar.in/e-news/view.php" target="_blank"><img src="http://mckarimnagar.in/wp-content/uploads/2015/07/enewsletter.jpg" border="1"/></a></div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/grievance/register_complaint.php" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2015/08/grievence.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/smart-cities-in-mckarimnagar/" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2016/09/smart-city.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/council/" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2015/04/item41.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+								</div>
+                                
+                                
+                                
+                                <br>
+<div class="row">
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                          <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/dashboard/assessmentTax.do" target="_blank">  <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img1.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                          <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/dashboard/vacantLandTaxlist.do" target="_blank"> <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img2.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                       <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/meeSevaMutation/Certificate.do" target="_blank">   <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img3.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										
+									</div>
+								</div>
+		{/if}
+        
+        
+        
+        
+      
+        
+	
+                    <br><br><br>
+                    
+                    
+                    
+ 
+  
+  
+  
+  
+  
+  
+  
+{include file='footer.tpl'}
+
+				
+					
+			  
+
+

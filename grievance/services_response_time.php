@@ -1,0 +1,46 @@
+
+	<?php
+	ini_set('display_errors',0);
+	require_once('connection.php');
+		$conn=getconnection();
+		
+			$sql="select g.grievance_id,g.date_regd,gt.disposed_date from grievances g LEFT join grievances_transactions gt on g.grievance_id=gt.grievance_id where g.app_type_id=?";
+			
+			$app_type_id = 2;
+			
+			$query = $conn->prepare($sql);
+			$query->bind_param("i",$app_type_id);
+			$query->execute();
+        	$rs = $query->get_result();
+			
+			
+			while($row=$rs->fetch_assoc())
+			{
+			 
+			   $grievance_id=htmlspecialchars(strip_tags($row['grievance_id']));
+			   $date_regd=htmlspecialchars(strip_tags($row['date_regd']));
+			   $disposed_date=htmlspecialchars(strip_tags($row['disposed_date']));
+						   
+				$start1  = date_create($date_regd);
+				$end1 	= date_create($disposed_date); // Current time and date			   
+			    $diff  = date_diff( $end1, $start1 );
+			
+			   $response_time=$diff->d.":".$diff->h.":".$diff->i.":".$diff->s;
+			   
+			   
+			   $sql = "UPDATE `services_map_info` SET `response_time`=? where grievance_id=?";
+			   
+			     $response_time = $response_time;
+			     $grievance_id = $grievance_id;
+        		 $query = $conn->prepare($sql);
+        		 $query->bind_param("si",$response_time,$grievance_id);
+               
+               
+               
+			   
+        
+			}
+			
+		$conn->close();	
+	?>
+	

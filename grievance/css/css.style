@@ -1,0 +1,23 @@
+
+
+
+.box{
+background-color: #003366;
+width:100%;
+height:100px;
+}
+
+.box2{
+background-color:#dadcdd;
+width:100%;
+height:500px;
+}
+
+.box3{
+background-color:#094b6d;
+width:20%;
+height:250px;
+
+border-radius:20px;
+
+}

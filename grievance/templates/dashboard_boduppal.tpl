@@ -1,0 +1,458 @@
+{include file='header.tpl'}
+
+{literal}
+<style>
+.bash_heading{
+	border-top: 1px solid #D5DDDF;
+    text-align: left;
+    padding: 10px !important;
+    background-color: #fff;
+	clear:both;
+	font-weight:bold;
+	font-size:16x;
+	color:#000;
+	}
+</style>
+
+
+{/literal}
+
+  <!-- Breadcrumbs Start -->
+
+  <!-- Breadcrumbs End -->
+  {if $user_type eq 'A'}
+  <div class="row dashboard-stats">
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-success">
+                                    <i class="fa fa-home text-large stat-icon success-text"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">0</p>
+                                    <p class="text-muted no-margin"><span style="color:#000;">Number of wards</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-danger">
+                                    <i class="fa fa-street-view text-large stat-icon danger-text"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_second">0</p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Number of Streets</span></p>
+                                </div>
+                            </section>
+                            
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-lovender">
+                                    <i class="fa fa-university text-large stat-icon lovender-text"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_third">0<span class="size-h3"></span></p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Number of Departments</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-info">
+                                    <i class="fa fa-user text-large stat-icon info-text"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_third">0<span class="size-h3"></span></p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Number of Employees</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-instagram">
+                                    <i class="fa fa-pencil text-large stat-icon bg-instagram"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_third">0<span class="size-h3"></span></p>
+                                    <p class="text-muted no-margin"><span style="color:#000;">Number of Grievance Types</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-vimeo">
+                                    <i class="fa fa-cog text-large stat-icon  bg-vimeo"></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_third">0<span class="size-h3"></span></p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Number of Service Types</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+
+                            
+                    </div>
+                    {else}
+                    
+                
+                
+                <div class="col-lg-12">
+			<div class="boxed">
+                <!-- Title Bart Start 
+                 <h4>Total Number of Service Requests</h4>-->
+               <div class="bash_heading row  m-b20"> Total Number of Service Requests  </div> 
+                <!-- Title Bart End -->
+                <div >
+				
+                <div class="row dashboard-stats">
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-success">
+                                    <i class="fa fa-cloud-download text-large stat-icon "></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">{if $data[2].total_received eq ''}0{else}<a href="services_boduppal.php?aptid=2&status=0&user_type={$user_type}&ulbid={$ulbid}">{$data[2].total_received}</a>{/if}</p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Received</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-lovender">
+                                    <i class="fa fa-check-circle text-large stat-icon "></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">{if $data[2].total_resolved eq ''}0{else}<a href="services_boduppal.php?aptid=2&status=3&sla=1&user_type={$user_type}&ulbid={$ulbid}">{$data[2].total_resolved}</a>{/if}</p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Completed with in SLA</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-vimeo">
+                                    <i class="fa text-large stat-icon "><img src="images/under-pro.png"/></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">{if $data[2].pending_beyond_sla eq ''}0{else}<a href="services_boduppal.php?aptid=2&status=2&sla=2&user_type={$user_type}&ulbid={$ulbid}">{$data[2].pending_beyond_sla}</a>{/if}</p>
+                                    <p class="text-muted no-margin "><span style="color:#000;">Under Progress </span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+
+                            
+                    </div>
+                
+                
+                
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="col-lg-12">
+			<div class="boxed">
+                <!-- Title Bart Start -->
+                <!-- <h4>Total Number of Complaints</h4>-->
+               <div class="bash_heading row  m-b20"> Total Number of Complaints  </div> 
+                <!-- Title Bart End -->
+                <div >
+				
+                <div class="row dashboard-stats">
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-success">
+                                    <i class="fa fa-cloud-download text-large stat-icon "></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first"> {if $data[1].total_received eq ''}0{else}<a href="services_boduppal.php?aptid=1&status=0&user_type={$user_type}&ulbid={$ulbid}">{$data[1].total_received}</a>{/if}</p>
+                                    <p class="text-muted no-margin"><span style="color:#000;">Received</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-lovender">
+                                    <i class="fa fa-check-circle text-large stat-icon "></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">{if $data[1].total_resolved eq ''}0{else}<a href="services_boduppal.php?aptid=1&status=3&sla=1&user_type={$user_type}&ulbid={$ulbid}">{$data[1].total_resolved-2}</a>{/if}</p>
+                                    <p class="text-muted no-margin"><span style="color:#000;">Completed with in SLA</span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <section class="panel panel-box">
+                                <div class="panel-left panel-icon bg-vimeo">
+                                    <i class="fa text-large stat-icon"><img src="images/under-pro.png"/></i>
+                                </div>
+                                <div class="panel-right panel-icon bg-reverse">
+                                    <p class="size-h1 no-margin countdown_first">{if $data[1].pending_beyond_sla eq ''}0{else}<a href="services_boduppal.php?aptid=1&status=2&sla=2&user_type={$user_type}&ulbid={$ulbid}">{$data[1].pending_beyond_sla}</a>{/if}</p>
+                                    <p class="text-muted no-margin"><span style="color:#000;">Under Progress </span></p>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+
+                            
+                    </div>
+                
+                
+                
+				</div>
+			</div>
+		</div>
+        
+        {if $tanker_enable_status eq '1'}
+     
+                     <div class="bash_heading row  m-b20"> Tanker Request Status  </div> 
+        
+        <div>
+          
+        <div class="row dashboard-stats">
+                     
+                        
+                   <div class="col-md-12">
+                   <div class="col-sm-3">
+                            <section class="panel panel-box">
+                                <div class="panel-top bg-success">
+                                    <div class="divider divider"></div>
+                                    <i class="size-h1"><img src="images/tanker_icon4.png"/></i>
+                                    <div class="divider divider"></div>
+                                </div>
+                                <div class="list-justified-container">
+                                    <ul class="list-justified text-center">
+                                        <li>
+                                            <p class="size-h1" style="color:#000;">{if $tankertot eq ''}0{else}{$tankertot}{/if}</p>
+                                            <p class="text-muted" style="color:#000;">Received</p>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <section class="panel panel-box">
+                                <div class="panel-top  bg-danger">
+                                    <div class="divider divider"></div>
+                                    <i class="size-h1"><img src="images/tanker_icon2.png"/></i>
+                                    <div class="divider divider"></div>
+                                </div>
+                                <div class="list-justified-container">
+                                    <ul class="list-justified text-center">
+                                        <li>
+                                            <p class="size-h1" style="color:#000;">{if $tankers_list[0] eq ''}0{else}{$tankers_list[0]}{/if}</p>
+                                            <p class="text-muted" style="color:#000;">Pending</p>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <section class="panel panel-box">
+                                <div class="panel-top bg-lovender">
+                                    <div class="divider divider"></div>
+                                    <i class="size-h1"><img src="images/tanker_icon3.png"/></i>
+                                    <div class="divider divider"></div>
+                                </div>
+                                <div class="list-justified-container">
+                                    <ul class="list-justified text-center">
+                                        <li>
+                                            <p class="size-h1" style="color:#000;">{if $tankers_list[1] eq ''}0{else}{$tankers_list[1]}{/if}</p>
+                                            <p class="text-muted" style="color:#000;" >Assigned</p>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <section class="panel panel-box">
+                                <div class="panel-top bg-vimeo">
+                                    <div class="divider divider"></div>
+                                    <i class="size-h1"><img src="images/tanker_icon.png"/></i>
+                                    <div class="divider divider"></div>
+                                </div>
+                                <div class="list-justified-container">
+                                    <ul class="list-justified text-center">
+                                        <li>
+                                            <p class="size-h1" style="color:#000;">{if $tankers_list[2] eq ''}0{else}{$tankers_list[2]}{/if}</p>
+                                            <p class="text-muted" style="color:#000;">Completed</p>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+                        
+                        
+                   </div>
+                   
+                        
+                        
+
+                            
+                    </div>
+        </div>
+        {/if}
+                     <div class="bash_heading row  m-b20"> Service Mapping Report </div> 
+		
+		<div class="row">
+			<div class="col-md-12">
+				<table class="display table-bordered table-striped table-condensed cf" width="100%">
+				<thead>
+					<tr style="background-color:#2c3e50; color:#FFF;">
+						<th>Sno</th>
+						<th>Total</th>
+						<th>Mapped</th>
+						<th>Not Mapped</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Services</td>
+						<td><a href='statistics.php?cs_type_id=2&code=0'>{$map.2.total_services}</a></td>
+						<td><a href='statistics.php?cs_type_id=2&code=1'>{$map.2.total_services_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=2&code=2'>{$map.2.total_services_not_mapped}</a></td>
+						
+					</tr>
+					<!--<tr>
+						<td>Complaints</td>
+						<td><a href='statistics.php?cs_type_id=1&code=0'>{$map.1.total_services}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=1'>{$map.1.total_services_mapped}</a></td>
+						<td><a href='statistics.php?cs_type_id=1&code=2'>{$map.1.total_services_not_mapped}</a></td>
+						
+					</tr>-->
+				</tbody>
+				
+				</table>
+				<br><br>
+			</div>
+		
+		</div>
+        
+		{if $ulbid eq '052'}
+		<div class="row">
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                            <a href="http://mckarimnagar.in/e-news/view.php" target="_blank"><img src="http://mckarimnagar.in/wp-content/uploads/2015/07/enewsletter.jpg" border="1"/></a></div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/grievance/register_complaint.php" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2015/08/grievence.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/smart-cities-in-mckarimnagar/" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2016/09/smart-city.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                           <a href="http://mckarimnagar.in/council/" target="_blank"> <img src="http://mckarimnagar.in/wp-content/uploads/2015/04/item41.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+								</div>
+                                
+                                
+                                
+                                <br>
+<div class="row">
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                          <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/dashboard/assessmentTax.do" target="_blank">  <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img1.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                          <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/dashboard/vacantLandTaxlist.do" target="_blank"> <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img2.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										<section class="panel">
+											<div class="">
+                                       <a href="http://125.16.9.166:8080/CDMA_TS_Dashboard/meeSevaMutation/Certificate.do" target="_blank">   <img src="http://siddipetmunicipality.in/wp-content/uploads/2016/06/img3.jpg" border="1"/></a>
+                                            </div>
+										</section>
+									</div>
+									<div class="col-lg-3">
+										
+									</div>
+								</div>
+		{/if}
+                    <br><br><br>
+                    
+                    
+                    
+  {/if}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+{include file='footer.tpl'}
+
+				
+					
+			  
+
+

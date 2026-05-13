@@ -1,0 +1,198 @@
+{include file='header.tpl'}
+{literal}
+<script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script><!-- DATATABLE JS -->
+<script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script><!-- BOOTSTRAP DATATABLE JS -->
+<script>
+function validateForm()
+{
+	var errors=0;
+	
+	var doc_desc=document.add_document.doc_desc.value;
+	
+	
+	if(doc_desc == '')
+    	{
+		alert('Enter description');
+		return false;
+	}
+		
+	
+}
+
+function delete_rec(doc_id)
+{
+// var del=confirm("Are you sure you want to delete this record?");
+//         if (del==true){
+        
+//           $.post("delete_doc.php",{doc_id:id},function(data)
+// 	{
+// 	$("#"+id).hide();
+	
+// 	$("#msg1").html(data);
+// 	});
+// 	} else {
+//             return false;
+//         }
+
+if(confirm('Do You really want to delete this record'))
+	    {
+	    var csrf_token=$("#csrf_token").val();
+		$.post('delete_doc.php',{doc_id:doc_id,csrf_token:csrf_token},function(data)
+		{
+			//alert(data);
+			if(data==1)
+			{
+			alert('document deleted successfully');
+			window.location='add_document.php';
+			}
+			else if(data==0)
+		    {
+		    alert('Unable to delete , Try again');
+		    }
+		    else if(data==3)
+		    {
+		    alert('Invalid token');
+		    }
+		    else if(data==4)
+		    {
+		    alert('csrf error');
+		    }
+		});
+	}
+}
+
+</script>
+
+<script type="text/javascript" language="javascript">
+$(document).ready(function() { /// Wait till page is loaded
+   $('#buss').click(function(){
+       //alert();
+      $('#ref').load('http://municipalservices.in/add_document.php #ref', function() {
+           /// can add another function here
+      });
+   });
+}); //// End of Wait till page is loaded
+</script>
+
+
+
+{/literal}
+
+
+
+
+ <div class="row ">
+	<div >
+		<div class="boxed">
+                <!-- Title Bart Start -->
+                <div class="title-bar success">
+                  <h4>Add new complaint type</h4>
+                 
+                </div>
+                <!-- Title Bart End -->
+                <div class="inner no-radius">
+              
+		<!--	<form  name='add_document' method='POST' action='add_document.php' class="form-horizontal" onSubmit="return validateForm()">
+			    
+			    <input type="hidden" name="token" value="{$token_id}"/>
+			    <input type="hidden" name="csrf_token" value="{$csrf_token}" id="csrf_token"/>
+			<input type='hidden' name='doc_id' value='0'>
+				<div class="form-body">
+					
+					{if isset($msg)}
+				<div class="{$class}">
+					<button class="close" data-close="alert"></button>
+					{$msg}
+				</div>
+				{/if}
+					<div class="form-group">
+						<label class="control-label col-md-3">Complaint Type :<span class="required">* </span></label>
+							<div class="col-md-8">
+								<input name='doc_desc' id='doc_desc' type="text" data-required="1" class="form-control"/ required="required">
+							</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-3">Complaint Type in Marathi :<span class="required">* </span></label>
+							<div class="col-md-8">
+								<input name='doc_desc_marathi' id='doc_desc_marathi' type="text" data-required="1" class="form-control"/ required="required">
+							</div>
+					</div>
+					
+					
+				
+					
+					
+					
+					
+					<div class="form-actions fluid">
+						<div class="col-md-offset-3 col-md-9">
+						<button type="submit" class="btn btn-info" name='save'>Submit</button>
+						
+						</div>
+					</div>
+				</div>
+				
+			</form>-->
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="row" id="div_print">
+		<div>
+			<div class="boxed">
+                <!-- Title Bart Start -->
+                <div class="title-bar white">
+                  <h4>Complaint types</h4>
+                 
+                </div>
+                <!-- Title Bart End -->
+                <div class="inner no-radius">
+                    <form action="" method="post">
+					<table class="table table-striped table-bordered table-hover table-full-width">
+									
+									<thead>
+										<tr style="background-color:#2c3e50; color:#FFF;">
+											<th>S.No</th>
+											<th>Complaint name</th>
+											
+										
+										</tr>
+									</thead>
+									
+									<tbody>
+									
+									{foreach from=$doc_list item=row key=doc_id}
+										<tr id="{$row.doc_id}">
+											<td>{counter}</td>
+											<td>{$row.cs_desc}</td>
+											<td align="center">
+											    
+											    <input type="text" name="comp_marathi[]" value="{$marathi_list[$doc_id]['telugu_description']}">
+											    <input type="hidden" name="cs_ids[]" value="{$doc_id}">
+					
+		
+									
+											</td>
+											
+										</tr>
+										{/foreach}
+										
+										
+									</tbody>
+								</table>
+								<input type="submit" class="btn btn-success" name="update" value="Update">
+								</form>
+				</div>
+			</div>
+		</div>
+
+
+
+<br>
+
+{include file='footer.tpl'}
+

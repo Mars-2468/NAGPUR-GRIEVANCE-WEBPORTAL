@@ -1,0 +1,26 @@
+insert into grievances(
+	 app_type_id,
+	 person_name,
+	 email,
+	 hno,
+	 address,
+	 ward_id,
+	 street_id,
+	 mobile,
+	 comp_desc,
+	 grievance_origin_id,
+	 grievance_status_id,
+	 date_regd,
+	 user_id,
+	 lat,
+	 lng,
+	 file_url,
+	 cat3_id,
+	 ulbid,
+	 tanker_type_id,
+	 device_os_id)
+	values('1','
+	test','','#',
+	'test','3','84','6281039850',
+	'test',4,1,now(),'60a13b4460b6b7e4','17.4121278','78.5155558',
+	'https://www.aurangabadmahapalika.org/csms/grievance/photos/160922/1663349290.jpg','70','250','','')

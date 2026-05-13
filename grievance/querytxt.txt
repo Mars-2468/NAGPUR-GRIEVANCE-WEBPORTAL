@@ -1,0 +1,1 @@
+select user_mobile,user_email,user_name from users where user_id='admin'
