@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Dewi Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+	.nav-pills .nav-link {
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	p{
+		text-align:justify;
+	}
+	
+	/* Closed state */
+	.accordion-button {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}
+
+	/* Open state */
+	.accordion-button:not(.collapsed) {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}
+
+	/* Arrow icon color */
+	.accordion-button::after {
+		filter: brightness(0) invert(1); /* makes icon white */
+	}
+
+	/* Default (no fill) */
+	#serviceTabs .nav-link {
+		background: none;
+		color: #000;
+		border-left: 5px solid transparent; /* ~2mm line */
+		border-radius: 0;
+		text-align: left;
+	}
+
+	/* Active state → only left edge colored */
+	#serviceTabs .nav-link.active {
+		background: none !important;
+		color: #ff4a17;
+		border-left: 5px solid #ff4a17;
+	}
+
+	/* Optional hover effect */
+	#serviceTabs .nav-link:hover {
+		border-left: 5px solid #ff4a17;
+		color: #ff4a17;
+	}
+
+/* colors changed to blue */
+
+	.accordion-button {
+		background-color: #0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.accordion-button:not(.collapsed) {
+		background-color: ##0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.dark-background {
+		--background-color: #0d06f4 !important;
+		--default-color: #ffffff;
+		--heading-color: #ffffff;
+		--surface-color: #28323a;
+		--contrast-color: #ffffff;
+	}
+
+	.scrolled .header {
+		--background-color: rgba(12, 5, 255, 0.85) !important; 
+	}
+	
+  </style>
+  
+</head>
+
+<body class="service-details-page">
+
+	<header id="header" class="header d-flex align-items-center fixed-top">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center">
+			<a href="index.html" class="logo d-flex align-items-center me-auto">
+				<!-- Uncomment the line below if you also wish to use an image logo -->
+				<!-- <img src="assets/img/logo.png" alt=""> -->
+				<h1 class="sitename">MARS</h1>
+			</a>
+
+			<nav id="navmenu" class="navmenu">
+				<ul>
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="index.html#about">About</a></li>
+				  <li><a href="index.html#services">Services</a></li>
+				  <li><a href="index.html#tech-expertise">Technology Expertise</a></li>
+				  <li><a href="index.html#engagement-models">Engagement Models</a></li>       
+				  <li><a href="index.html#contact">Contact</a></li>
+				</ul>
+				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+			</nav>
+			<!-- <a class="cta-btn" href="index.html#about">Get Started</a> -->
+		</div>
+	</header>
+
+	<main class="main">
+
+		<!-- Page Title -->
+		<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+		  <div class="container position-relative">
+			<h1>About Us</h1>
+			<p class="text-center">
+				MARS Telecom Systems is an ISO 9001:2015 and CMMi Level 3 certified company specializing in telecom, networking, and custom software development, delivering high-quality solutions to global clients. With strong R&D expertise, flexible engagement models, and skilled professionals, MARS ensures cost-effective, innovative, and scalable IT solutions that enhance business value and competitiveness.
+			</p>
+			<nav class="breadcrumbs">
+			  <ol>
+				<li><a href="index.html">Home</a></li>
+				<li class="current">About Us</li>
+			  </ol>
+			</nav>
+		  </div>
+		</div><!-- End Page Title -->
+
+		<!-- Service Details Section -->
+		<section id="service-details" class="service-details section">
+
+			<div class="container">
+				<div class="row gy-4">
+
+					<!-- LEFT SIDE MENU -->
+					<div class="col-lg-3">
+						<div class="nav flex-column nav-pills" id="serviceTabs" role="tablist">
+
+							<button class="nav-link active" data-bs-toggle="pill" data-bs-target="#company_overview" type="button">
+							  Company Overview
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#process" type="button">
+							 Process
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#approach" type="button">
+							  Approach
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#infrastructure" type="button">
+							  Infrastructure
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#quality_policy" type="button">
+							  Quality Policy
+							</button>
+							
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#careers" type="button">
+							  Careers
+							</button>
+
+						</div>
+					</div>
+
+					<!-- RIGHT SIDE CONTENT -->
+					<div class="col-lg-9">
+						<div class="tab-content">       
+							<!-- PAGE 2 -->
+							<div class="tab-pane fade show active" id="company_overview">
+								<h3>Company Overview</h3>
+								<p>
+									MARS Telecom Systems (ISO 9001:2015 certified and CMMi Level 3 Appraised) is an established software product development solutions provider and an outsourced development and services partner with deep expertise in the telecom, networking, convergence and custom application development.
+								</p>
+								<p>
+									MARS offers exemplary software product development and QA services to global clients and our client rely on our proven practices, global delivery models, state-of-art development centers in Hyderabad and Bangalore, India and a talented team of domain specialists ensure that the clients derive optimum return on their IT budgets.
+								</p>
+								<p>
+									MARS strength lies in our flexible partnering models, talented pool of experienced Software Engineers; flawless project execution and our innovative solutions are focused to augment the business value of our clients. MARS Telecom has managed several global engagements by leveraging its local market knowledge, technical expertise and experience to provide highly competent resources, excellent work culture and world-class infrastructure.
+								</p>
+								<p>
+									Globally, Corporates are facing challenges in terms of keeping pace with the technology and embracing cost effective newer technologies has become one of the important to strategy to stay competitive. MARS aligns its services, engagements, capabilities to meet these challenges and we believe that by clients enjoy multi-lateral benefits like cost-efficiency, increased focus, speed of delivery and market-worthiness of the products and solutions. With a massive R&D experience: consummate expertise, unique insights, professionalism and commitment to quality is what we bring to the table.
+								</p>
+								
+							</div>
+							 <!-- PAGE 1 -->
+							<div class="tab-pane fade" id="process">
+								<h3>Our Offshore Process Overview</h3>
+								<p>
+									MARS's offshore arm has worked on engagements partnering with teams from the US, Latin America, Middle-East, Europe and different countries in the Asia-Pacific region in delivering solutions for different target groups for specific countries. Working with teams from different countries and cultures has helped MARS develop a process that is flexible and can be adapted to the specific needs of the engagement. MARS understands that the same solution may have to be rendered differently when delivering to a different target audience in a different country. This understanding helps in ensuring that the requirements are well understood for the specific audience(s) and in reducing the time and effort required in sharing this understanding.
+								</p>
+								
+								<p>
+									MARS has developed an offshore model that has matured over the years, applying the learning from the experiences in various engagements and working with different partners - both service and product companies.
+								</p>
+								
+								<p>
+									MARS uses processes and tools that address the critical success factors for engagements utilizing the onshore-offshore model.
+								</p>
+								
+								<p>
+									Largely, two modes of offshore development can be identified - one, in which all of the development is typically handled by a single offshore team and the other, in which development is by distributed teams, usually one onsite and another offshore.
+								</p>
+								
+								
+								<p>
+								<div class="d-flex justify-content-center align-items-center">
+									<img src="assets/images/Onsite_Offshore_Model_big.gif" alt="" class="img-fluid services-img">
+								</div>
+								</p>
+								<p>
+									<div class="accordion" id="accordionExample">
+																				
+										<!-- Item 1 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingOne">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseOne">
+													Single team - Onsite requirements and Offshore design, build and test
+												</button>
+											</h2>
+											<div id="collapseOne" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">													
+													<ul>
+														<li><i class="bi bi-check"></i>Requirements are understood through a series of interviews onsite with the client team. These are documented using various aids (use cases/user flows, textual description) and passed on to the offshore team. The offshore team validates their understanding of the requirements and proceeds with the design, build and test.</li>																		
+														<li><i class="bi bi-check"></i>Usually, MARS participates in the requirements process and has one or more of its resources available at the client place in the requirements gathering. However, where it makes sense based on the specific engagement, we also work with either the client's representative or partner's team in gathering the requirements, supported by members from MARS's offshore team. In these instances, we establish a clear understanding of how the requirements are captured and ensure that the requirements are well understood by the offshore team before proceeding with the subsequent phases of the development.</li>																		
+														<li><i class="bi bi-check"></i>Distributed development - Rightshore Model - A combination of onsite and offshore teams</li>																		
+														<ol>
+															<li><i class="bi bi-check text-primary"></i>We have worked on different engagements (typically larger ones) where development is distributed, with both onsite and offshore teams. Depending on the needs, schedule, skills and the size of the teams, different components are developed by the different teams. The leads/managers are responsible for:</li>
+															<li><i class="bi bi-check text-primary"></i>Ensuring that everyone participating understands the specific needs of the engagement</li>
+															<li><i class="bi bi-check text-primary"></i>Coming up with the schedule and plan for the distributed development</li>
+															<li><i class="bi bi-check text-primary"></i>Managing the integration of the different work products as they are delivered.</li>
+														</ol>																															
+													</ul>
+													<p>
+														Thanks to the extensive experience and effective use of available means of communication, we have been successful in ensuring that the communications among all team members is seamless and virtually instantaneous, in the process significantly reducing time to market when compared to other typical global projects.
+													</p>
+													<p>
+														MARS's offshore arm has worked on engagements partnering with teams from the US, Latin America, Middle-East, Europe and different countries in the Asia-Pacific region in delivering solutions for different target groups for specific countries. Working with teams from different countries and cultures has helped MARS develop a process that is flexible and can be adapted to the specific needs of the engagement. MARS understands that the same solution may have to be rendered differently when delivering to a different target audience in a different country. This understanding helps in ensuring that the requirements are well understood for the specific audience(s) and in reducing the time and effort required in sharing this understanding.
+													</p>
+													<p>
+														MARS has developed an offshore model that has matured over the years, applying the learning from the experiences in various engagements and working with different partners - both service and product companies.
+													</p>
+													<p>
+														MARS uses processes and tools that address the critical success factors for engagements utilizing the onshore-offshore model.
+													</p>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Item 2 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingTwo">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+													Success Manager
+												</button>
+											</h2>
+											<div id="collapseTwo" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">													
+													<p>													
+														MARS's onshore Engagement Manager will be responsible for the successful management of MARS's responsibilities in any given engagement. This "success manager" will have an offshore counterpart, who is an integral part of the delivery team and has clear responsibilities for project deliverables, is also entrusted with the responsibility of ensuring that the offshore team stays in synch with the client and the onsite team, and consistently delivers quality work. Over the last decade, MARS has developed this concept of "Success Managers" to help in the smooth execution of the engagements in the onsite-offshore model and to render seamless the process of communication between distributed components of the team. The picture above gives an overview of the role and the responsibilities of the success managers.
+													</p>													
+													<p>													
+														The onshore success manager is responsible for all client interactions, understanding project requirements, client approvals and sign-offs, change management, onsite team's project schedule and coordination with overall project schedule, issue resolution and overall quality of deliverables from the onsite and offshore team.
+													</p>													
+													<p>													
+														The offshore success manager is responsible for gaining a thorough understanding of the project requirements, offshore team's project schedule and coordination with overall project schedule, Issue resolution, change management, quality and timeliness of deliverables from the offshore team, and effective communication between onsite and offshore components.
+													</p>													
+													<p>													
+														Overall, between them, the success managers are an integral part of the project team with specific technical responsibilities, with the additional responsibility of ensuring the success of the engagement, thanks to their experience and seniority. Their goal is to stay on top of the progress of the overall engagement and the specific assignments within the project. They manage the schedules of interaction between the two teams and the client. They ensure that the distributed teams stay in sync and the client is up to date on the progress.
+													</p>													
+												</div>
+											</div>
+										</div>
+										<!-- Item 2 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingThree">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseThree">
+													  Processes and Tools
+												</button>
+											</h2>
+											<div id="collapseThree" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">													
+													<p>		
+														MARS has standard processes and tools for Schedule management, Issue Management and Change Control in the engagements that we have successfully executed. A central location on one of our servers is used as a central repository for sharing documents, work products etc. among the client and the teams.
+													</p>													
+													<p>	
+														MARS's change management process requires setting up of a change control board with members from the client team and the development team. All change requests are routed to this board. Based on an analysis and prioritization of the requested change, the impacts on effort and schedule are identified. The change control board then deliberates and determines if the requests are to be accepted in the current schedule or in subsequent phases. Once accepted, either a separate statement of work for the changes is drawn up, or addendums to the existing one are prepared and signed off on.
+													</p>													
+													<p>													
+														MARS can setup "disconnected" environments for the specific client's engagements. Where required, access to the client's staging and production environments can be through secure VPN access from these environments.
+													</p>													
+													<p>													
+														To enable smooth onshore-offshore collaboration, MARS has installed a high-speed broadband connectivity, backed up by dual ISDN connectivity. We also have video-conferencing facility in our offices, which is extensively used to communicate between our global clients and India. This infrastructure ensures that the offshore team is always connected to both the client and the onshore teams. MARS consultants use instant messenger chat, conference chat including voice chat, video conference, phone conferences, web conferences, documents, an online project communication system and email to ensure that everyone on the project team stays in synch.
+													</p>													
+													<p>	
+														Tools such as a web-based Project Communication System that integrates most of the above modes of communication (a preview of it is given in the picture below) are used through out the delivery. This tool facilitates seamless access to the project repository and the various tools in an integrated fashion that promotes efficiency and effectiveness in the collaboration between the teams. This, we believe, is a differentiating factor in ensuring success of offshore engagements.
+													</p>													
+												</div>
+											</div>
+										</div>
+								
+									</div>
+								</p>
+							</div>
+							<!-- PAGE 3 -->
+							<div class="tab-pane fade" id="approach">
+								<h3>Approach</h3>
+								<h3>MARS Model for Offshore Development</h3>
+								<p>
+									Based on the experience we have gained over the years, we have developed an approach to the successful delivery of complex development projects that relies on the right skills at the right place integrated through a robust communication and liaison process. Our approach integrates Onsite and Offshore components to maximize the value received while minimizing the cost and risk.
+								</p>
+								<div class="d-flex justify-content-center align-items-center">
+									<img src="assets/images/OffShore_Dev_Model.jpg" alt="" class="img-fluid services-img">
+								</div>
+								<h3>Onsite</h3>
+								<p>
+									Our Onsite team will work side by side with you at your local office. This team is responsible for gathering your User Requirements and packaging them for delivery to our Offshore team in India. All communication with our Offshore team will be managed by our Onsite team. This reduces the possibility of misinterpreting your requirements and reduces the potential frustration of communicating across time, distance and culture.
+								</p>
+								<p>
+								The onshore team is also your initial point to go for Issue Resolution. They are committed to your satisfaction and the overall quality of our work.
+								</p>
+								<h3>Offshore</h3>
+								<p>
+									Our Offshore team is the development factory for completing the technical tasks required to meet your needs. Working under the direction of our Onsite team, the Offshore team will assist in design, develop the application/component, configure and test the solution that fulfills your User Requirements. This team is also fully committed to your satisfaction and the overall quality of our work.
+								</p>
+								<p>
+									In summary, the two groups of teams connected by a common methodology, effective and constant communications, are committed to the success of your engagements.
+								</p>
+								<h3>Phased Approach</h3>
+								<p>
+									MARS utilizes a phased approach to implementing solutions for our clients. There are well-defined milestones and deliverables for each phase. MARS believes in working closely with our clients throughout the engagement and through all the phases of development. The approach that we will adopt for the client will be based on this time-tested methodology and will be customized to the specific needs of this engagement.
+								</p>
+								<p>
+								<div class="row align-items-center">
+    
+									<!-- Image -->
+									<div class="col-md-4">
+										<img src="assets/images/PhasedApproach_big.gif"
+											 class="img-fluid"
+											 style="width:100%; height:250px; object-fit:cover;"
+											 alt="">
+									</div>
+
+									<!-- Text -->
+									<div class="col-md-8">
+										<h3>Discovery</h3>
+										<p>
+											During the Discovery phase, we try to understand your vision and objectives 
+											of the engagement. Often, we are engaged to help our clients to strategize 
+											and define the solutions required to meet those objectives.
+										</p>
+										<h3>Requirements</h3>
+										<p>
+											The requirements for the envisioned solution are determined through interviews and interactions with the various stakeholders. We typically schedule interviews and discussions with the appropriate client personnel to validate and confirm the requirements and to uncover specific details and features relating to individual processes and components.
+										</p>
+										<p>
+											During this phase we will also identify the specific needs for integration with other systems and for data migration, if any. We will work with the client to define the 'acceptance criteria' for the solution to ensure 
+										</p>
+										
+									</div>
+									
+									<p>
+										  compliance with the requirements. This definition will be used during final acceptance of the implemented solution.
+									
+										By the end of this detailed requirements phase, we will firm up the technical architecture of the proposed solution and develop a detailed project plan that identifies all the tasks and the resources.
+									</p>
+									<h3>Design</h3>
+									<p>
+										Based on the detailed requirements and the technical architecture identified, we will develop the detailed design specifications for the solution. We will also identify any specific hardware, software, networking needs, sample data and test instances for systems with which the solution will need to integrate.
+									</p>
+									<p>
+										At the end of this phase, a programming guideline document will be created that will define the approach to application coding. We will also update the project plan with the specific tasks and resources required for the build phase.
+									</p>
+									<h3>Build</h3>
+									<p>
+										During the Build Phase, we will develop the solution based on the design specifications. This will include the database as per the data model developed during the Design Phase.
+									</p>
+									<p>
+										In this phase, the developed components are tested individually and then integrated. The integrated system is completely tested for functional compliance with the requirements.
+									</p>
+									<p>
+										As part of this phase, we identify the relevant milestones such as unit testing, integration testing, and delivery for QA and testing by the client's IT team. The project plan will identify junctures for controlled release(s) of the solution modules for QA and testing, to ensure effective testing, review, feedback and fixes, each step designed to ensure that the final deliverable meets the project requirements.
+									</p>
+									<h3>Deploy</h3>
+									<p>
+										Once the various modules have passed through QA and testing, we will support the client through the integration, QA, testing, acceptance and deployment process, based on the criteria defined by the client.
+									</p>
+								</div>
+								</p>
+								
+								
+								<h5>Project Delivery Setup:</h5>
+								<p>								
+									Based on our experience in executing Enterprise scale engagements, we recommend a 3-tiered setup consisting of the following environments.
+								</p>								
+								<ul>
+									<li><i class="bi bi-check"></i>Development Environment</li>																		
+									<ol>
+										<li><i class="bi bi-check text-primary"></i>This is the environment in which all the development takes place. The Development team deploys the application on the Development server, tests it and prepares it for deployment on the Staging server.</li>
+									</ol>
+									<li><i class="bi bi-check"></i>Staging Environment</li>																		
+									<ol>
+										<li><i class="bi bi-check text-primary"></i>This environment is identical to the Production environment and is primarily used as an approval bed from the client. All the code from the Development server is moved to the Staging Server. The client verifies and validates the implemented functionality and also approves them before moving it to Production.</li>
+										<li><i class="bi bi-check text-primary"></i>Acceptance typically happens in this environment</li>
+									</ol>	
+									<li><i class="bi bi-check"></i>Production Environment</li>																		
+									<ol>
+										<li><i class="bi bi-check text-primary"></i>This is the "Live" environment where the application will be hosted.</li>
+										<li><i class="bi bi-check text-primary"></i>This is the environment where all the final code will be deployed from the Staging environment.</li>
+									</ol>									
+								</ul>
+								<p>	
+									The process recommended is very strict and is intended to ensure that the "Live" environment is not corrupted accidentally. The Production server is never updated directly from the Development environment. Any updates to the application will be first hosted on the Staging environment for verification and, once approved the code is moved by the client IT team from the Staging servers to the Production servers.
+								</p>	
+								<p>	
+									In this case, given that development will primarily take place off-shore in India and given the other security and connectivity concerns, we propose the following approach.
+								</p>	
+								<p>	
+									A development environment will be established at MARS development center in India and the staging/test environment at the client. During the course of the project, when the editions have been developed, tested and deemed ready for review by the client, we will create a VMware image of the entire application and post it via VPN to the staging environment. The client will review the application on the staging server and provide us feedback. MARS will deliver the appropriate updates via VPN. During the maintenance phase, every release will follow a similar process.
+								</p>	
+								
+							</div>
+							<!-- PAGE 4 -->
+							<div class="tab-pane fade" id="infrastructure">
+								<h3> Infrastructure</h3>
+								<p>Located in prime areas in the cities of Hyderabad and Bangalore. Our offices occupies a convenient position with quick access to the Airport, Govt. offices, Hitec City etc. Spread across two locations in Hyderabad our office space is capable to host 300 + employees. Besides space reserved for offices, employees have access to recreational areas, underground parking lot and medical facilities, all completely secured and supported by state-of-the-art security and infrastructure.</p>
+								<p>
+									<div class="accordion" id="accordionExample">
+																				
+										<!-- Item 1 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingOne">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseOne">
+													Security
+												</button>
+											</h2>
+											<div id="collapseOne" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">	
+													<p>
+														<ul>
+															<li><i class="bi bi-check"></i>Badge access control for all rooms</li>																		
+															<li><i class="bi bi-check"></i>Fire and Smoke detectors throughout the building</li>																		
+															<li><i class="bi bi-check"></i>24hrs guarded location</li>																		
+															<li><i class="bi bi-check"></i>Adequate Fire extinguishing system</li>																		
+														</ul>
+													</p>
+												</div>
+											</div>
+										</div>
+										
+										<!-- Item 2 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingTwo">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+													Blended Telephony Architecture
+												</button>
+											</h2>
+											<div id="collapseTwo" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">													
+													<p>													
+														<ul>
+															<li><i class="bi bi-check"></i>Optimal blend of PSTN, ISDN /BRI (public telephony network) and LAN telephony</li>																		
+															<li><i class="bi bi-check"></i>Primary Internet Service provider - Among India's Leading ISP's with 99.96% uptime</li>																		
+															<li><i class="bi bi-check"></i>Back-up carriers ISDN with automatic switch over</li>																		
+														</ul>
+													</p>													
+																										
+												</div>
+											</div>
+										</div>
+										<!-- Item 3 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingThree">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseThree">
+													   Fully Redundant Data Infrastructure
+												</button>
+											</h2>
+											<div id="collapseThree" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>Dual Link Facility of Primary Link being RF and Secondary being ISDN for auto fall situation. ( to be upgraded from ISDN to Leased Circuit Shortly)</li>																		
+															<li><i class="bi bi-check"></i>State of Art Firewalls, routers, Stacked switches with infrastructure-wide redundancy</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>	
+										<!-- Item 4 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingFour">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseFour">
+													   Power
+												</button>
+											</h2>
+											<div id="collapseFour" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>200KVA diesel generator, providing emergency power to the building for 7 days continuously</li>																		
+															<li><i class="bi bi-check"></i>80KVA UPS</li>																		
+															<li><i class="bi bi-check"></i>Fully automated switch over</li>																		
+															<li><i class="bi bi-check"></i>Dedicated UPS for Servers and critical equipments</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>	
+										<!-- Item 5 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingFive">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseFive">
+													   Data Center
+												</button>
+											</h2>
+											<div id="collapseFive" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>Scalable Data center with racks from top vendors, Servers, Firewall Redundant AC</li>																		
+															<li><i class="bi bi-check"></i>Cat6 Structured cabling and Patch panels from to house close to 400 ports.Gigabit Backbone from the Edge Switches to the Aggregation Switch which Links to the Core using the MM Fiber Cable for both Data and Voice.</li>																		
+															<li><i class="bi bi-check"></i>The Core Switch is a 24 port Full Layer-3 Switch which is backed by the Redundancy with the feature of XRN (eXtended Resilient Network) which does the Dynamic Link Aggregation (DLA) Dynamic Management (DM) and Dynamic Routing.</li>																		
+															<li><i class="bi bi-check"></i>The Internal Router Forwards the Traffic to either the Firewall or the VPN Router based on the destination. If it's a internet traffic it goes to Firewall and Gateway Router and if its an intranet traffic its passed on to VPN Router which does the encryption before passing on to the destination thru site to site VPN transparent to the user.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>	
+										<!-- Item 6 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingSix">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSix">
+													   User End
+												</button>
+											</h2>
+											<div id="collapseSix" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>Provided with the 4 ports well defined with color coding for Work Environment, Desk phone, development and a Spare. The same policy has been adopted throughout at every of the workstation.</li>																		
+															<li><i class="bi bi-check"></i>Every User has 4 UPS power point at their disposal.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>
+										<!-- Item 7 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingSeven">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+													    Dedicated Lab
+												</button>
+											</h2>
+											<div id="collapseSeven" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>A dedicated Lab has been designed such that at no point of time the Local Lab traffic is going to affect the Core Network traffic. Groups of users have been allocated a network Segment to overcome the shortage of IPs and every user is linked thru his / her Edge Switch to the Modular Chassis based Gigabit Multilayer Switch.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>
+
+										<!-- Item 8 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingEight">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseEight">
+													   Servers
+												</button>
+											</h2>
+											<div id="collapseEight" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>Branded top class Servers with Dual Processor, Redundant Memory and RAID for DATA Security with Dual SMPS.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>
+										
+										<!-- Item 9 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingNine">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseNine">
+													   Desktops
+												</button>
+											</h2>
+											<div id="collapseNine" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>Technology ready - branded Desktops with good hardware configuration. Maintaining Strict SLA's for Service and Support.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>	
+										
+										<!-- Item 10 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingTen">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTen">
+													   Data Storage
+												</button>
+											</h2>
+											<div id="collapseTen" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">							
+													<p>	
+														<ul>
+															<li><i class="bi bi-check"></i>State of the art Tape drive connected with SCSI 320.</li>																		
+														</ul>
+													</p>													
+												</div>
+											</div>
+										</div>
+								
+									</div>
+								</p>
+							</div>
+							<!-- PAGE 5 -->
+							<div class="tab-pane fade" id="quality_policy">
+								<h3>Quality Policy</h3>
+								We aim:
+								<ul class="ps-4">
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>To partner in software product development and deliver cost effective products on time fulfilling contractual obligations.</li>																		
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Update and improve our systems, procedures and technologies according to the needs and requirements of our internal and external customers.</li>																		
+								</ul>
+								MARS Telecom Systems is CMMi Level 3 Appraised
+								<div class="d-flex justify-content-center align-items-center">
+									<img src="assets/images/cmmlogo.png"
+										 class="img-fluid"										
+										 alt="">
+								</div>
+								<p>
+									MARS Telecom Systems has been awarded International Organization for Standardization (ISO) 9001:2015 certificate by NQA - UK accredited to UKAS - UK. The award follows an independent audit of MARS Telecom Systems' operations, management and quality systems. With this certification, MARS has demonstrated its ability to provide software product develoment services that meet and exceeds customer requirements.
+								</p>
+								<div class="d-flex justify-content-center align-items-center">
+									<img src="assets/images/NQA_Logo.gif"
+										 class="img-fluid"										
+										 alt="">
+										 
+										 <img src="assets/images/UKAS_Logo.gif"
+										 class="img-fluid"										
+										 alt="">
+								</div>
+								<h3>Scope</h3>
+								<p>
+									The scope of the certification includes "Design, Development, Implementation,Testing, Delivery and Support of Software Products and Services".
+								</p>
+								<h3>Quality Policy</h3>
+								<p>
+									We are committed to provide our clients effective Software Design and Development services through consistent processes, innovations, improvements thereby exceeding our clients' needs and expectations.
+								</p>
+								
+							</div>		
+							
+							<!-- PAGE 6 -->
+							<div class="tab-pane fade" id="careers">
+							<h3>Job Opportunities</h3>
+							<P>
+								<strong>Position : Senior Software Developer - JAVA </strong></br>
+								<strong>Job Location : </strong> Hyderabad</br>
+								<strong>Company :</strong> MARS Telecom Systems Private Limited</br>
+								<strong>Education :</strong> Bachelors' Degree in Computer Science</br>
+								<strong>Experience :</strong>  6 + years of software development experience </br>
+								<strong>Experience :</strong>  3+ years of software development experience in cloud based, multi-tiered, enterprise application systems in Java technologies.</br>
+								<strong>Experience :</strong> Experience working with C#/.NET is a plus</br>
+								<strong>Experience :</strong>  Experience of the following is highly desirable: JAVA 1.7 & higher, Any messaging system, JBoss/Wildfly server, Tomcat, Linux, HTTP, SOAP/REST Web Services, XML, JSON</br>
+								<strong>Experience :</strong>  Experience in working on EJBs and the web layer, Spring Framework, Maven </br>
+							</p>	
+								
+								<strong>Job Description :</strong></br>
+							<p>
+								<ul class="ps-4">
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Strong understanding of Algorithms and Data Structures. </li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Prior experience on developing micro-services and successfully built products using SOA</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Experience in using a system integration middleware for API management and multi-point integrations </li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Strong understanding of Algorithms and Data Structures.</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Good experience with Java Unit Testing Frameworks and Tools such as JUnit, TestNG, Mockito etc.</li>	
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Experience in using a system integration middleware for API management and multi-point integrations</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Good experience with Java Unit Testing Frameworks and Tools such as JUnit, TestNG, Mockito etc. </li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Strong and demonstrable experience working in design and development of public facing & private REST APIs</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>In-depth knowledge of PL/SQL, stored procedures, schema design in large scale relational databases such as Oracle, MS SQL. Nosql database design and optimization experience is a plus</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Strong and demonstrable experience working inacc continuous integration and continuous deployment systems (CICD)</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Ability to work both independently and as a team player</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Experience and understanding of software source control systems, preferably Git</li>
+									<li><i class="bi bi-circle-fill me-2" style="font-size:8px;"></i>Good understanding & working experience in cloud computing platforms such as Amazon cloud, Azure Cloud is a plus</li>
+								</ul>
+							</p>
+							<strong>We are currently hiring talented and highly motivated engineers for the skill sets above mentioned in Hyderabad, India. If you are interested please send your resume to careers@mars-india.com</strong>
+							
+							<br>
+							<h3 style="padding-bottom:10px;">Career Overview</h3>
+							<p>
+								MARS is a top-notch IT services company with over 10 years experience and is one of the fastest growing companies in INDIA. MARS offers a full range of IT services and industry specific solutions to help clients take advantage of opportunities. Our culture and work environment motivates every MARSian to go beyond their defined roles and excel in their individual capacities. We provide MARSian with the opportunities to exercise their responsibility, integrity and creativity while developing themselves, their careers, and our business. We have been able to deliver leading-edge solutions consistently to our clients by bringing together highly talented people in a creative and collaborative environment.<br>
+								<br>
+								Delivering unique value to our customers, driving growth and managing our business efficiently have been the result of our extraordinary teamwork. We are committed to helping all of our employees develop their skills through extensive training support as well as ensuring that we engage them in a two-way dialogue about their career development and the employment opportunities.The technical excellence of our services can only be delivered by the most highly qualified and dedicated team of people on who we rely to keep our customers happy and to help grow our business. We have nurtured new technological strengths and enhanced domain expertise. All these achievements have boosted our position to look forward to bigger and more challenging roles in the journey ahead.<br>
+								<br>
+								MARS is an Equal Employment Opportunity employer. We promote and support a diverse workforce at all levels in the company. All qualified applicants will receive consideration for employment without regard to race ,religion,color,sex,age,national origin or disability. All applicants will be evaluated solely on the basis of their ability , competence , and performance of the essential functions of their positions. We welcome employees of all backgrounds and passions, and place a high value on the unique perspectives that make up MARS. Together we believe in working hard, having fun, and celebrating our achievements. We support you to grow and make you better at what you are; as well as help you ‘know’ yourself as a professional.<br>
+								<br>
+								We would like to hear from talented individuals who would like to work at MARS. We will keep your CV on record for 6 months and contact you if a relevant position becomes available.
+							</p>
+							<h4  class="wow fadeInRight" style="padding-top:20px; padding-bottom:10px;">Working @ MARS</h4>
+							<p class="wow fadeInRight">
+								<strong>Freedom to work across Domains:</strong><br>
+								At MARS, we have established an environment that focuses on individual talent and interests. As a proven practice, we promote cross-domain experience that provides you with opportunities to function across different industry verticals, service practices, and functional domains as well as varied technology platforms. While all these factors help hone your skills across platforms, they also offer customers a talent pool with expertise that exceeds their industry benchmarks; at the same time, they continuously present you with the opportunity to explore the domain where you believe you would fit the best.<br>
+								<br>
+								<strong>Culture:</strong><br>
+								People from diverse backgrounds and geographies have come together in pursuit of a common vision. At MARS our culture supports not only the work that we do, but also our people. At MARS, we welcome, value, and respect every employee. And we listen. Each of us is responsible for upholding and fostering a culture that is inclusive, ethical, and supports our corporate vision and goals. We promote a work environment in which we learn from one another. And we take full advantage of our differences to build and deliver better solutions, products, and services to our customers.<br>
+								<br>
+								<strong>Open door policy:</strong><br>
+								Our corporate culture is open and inclusive; irrespective of your experience, you will immediately be welcomed into the team, and would always have a significant role to play.<br>
+								<br>
+								<strong>On-the-job learning:</strong><br>
+								Intense training and development programs facilitate on-the-job learning.<br>
+								<br>
+								<strong>Mentor programs:</strong><br>
+								Our mentor programs foster supportive relationships that help develop skills, behavior, and insights to enable you to attain your goals.<br>
+								<br>
+								<strong>Awards & Rewards:</strong><br>
+								Recognition programmes aren’t mere processes but a powerful tool to reinforce key outcomes our associates create for our businesses. As an organization we strongly believe that when we recognize people, we reinforce their actions and behaviors. Rewards & Recognitions at MARS have always been key engagements with a gargantuan reach.
+							</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section><!-- /Service Details Section -->
+
+	</main>
+
+	 <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MARS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>MARS Telecom Systems Pvt. Ltd.</p>
+            <p>Hyderabad – 500 081, Telangana, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@mars-india.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#tech-expertise">Technology Expertise</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#engagement-models">Engagement Models</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mars</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://mars-india.com/">Mars</a> Distributed by <a href=“https://mars-india.com>Mars
+      </div>
+    </div>
+
+  </footer>
+
+	<!-- Scroll Top -->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Preloader -->
+	<div id="preloader"></div>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

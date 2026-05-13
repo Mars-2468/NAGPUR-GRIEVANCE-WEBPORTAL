@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | MARS Software Solutions</title>
+        <meta name="description"
+            content="Get in touch with MARS Software Solutions to discuss your next digital project.">
+        <meta name="keywords"
+            content="software development, web development, mobile app development, SaaS, API integration, cloud solutions">
+        <meta name="author" content="MARS Software Solutions">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <style>
+        :root {
+            --bg: #f4f7ff;
+            --surface: #ffffff;
+            --primary: #003366;
+            --primary-soft: #336699;
+            --accent: #00b4d8;
+            --muted: #5f6c7b;
+            --border: rgba(0, 51, 102, 0.08);
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: #1f2937; scroll-behavior: smooth; }
+        body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(circle at top left, rgba(0, 180, 216, 0.14), transparent 25%), radial-gradient(circle at bottom right, rgba(0, 51, 102, 0.12), transparent 18%); pointer-events: none; }
+        .navbar { backdrop-filter: blur(12px); background: rgba(2, 11, 143, 0.94); }
+        .navbar-brand { font-weight: 700; letter-spacing: 0.12em; color: #ffffff; }
+        .nav-link { color: rgba(255,255,255,0.88) !important; font-weight: 500; }
+        .nav-link:hover { color: #ff621f !important; }
+        .hero { min-height: 100vh; display: grid; place-items: center; padding: 4rem 0; position: relative; background: linear-gradient(135deg, #020b8f 0%, #0818e5 55%, #02155e 100%); }
+        .hero::before { content: ""; position: absolute; inset: 0; background: rgba(2, 11, 143, 0.35); }
+        .hero .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.02; letter-spacing: -0.04em; color: #fff; }
+        .hero p.lead { color: rgba(255,255,255,0.92); max-width: 720px; }
+        .btn-primary { background: #ff621f; border: none; box-shadow: 0 24px 60px rgba(255, 98, 31, 0.18); }
+        .btn-primary:hover { background: #e35417; }
+        .navbar-toggler-icon { filter: brightness(0) invert(1); }
+        .section { padding: 6rem 0; position: relative; }
+        .section-title { font-size: clamp(2rem, 2.5vw, 3rem); font-weight: 800; margin-bottom: 0.75rem; }
+        .section-subtitle { text-transform: uppercase; letter-spacing: 0.2em; color: #00b4d8; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; display: inline-block; }
+        .section-text { color: var(--muted); max-width: 760px; }
+        .card-hero { border: 1px solid rgba(0, 51, 102, 0.1); border-radius: 24px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .card-hero:hover { transform: translateY(-6px); box-shadow: 0 28px 70px rgba(15, 23, 42, 0.1); }
+        .icon-circle { width: 3.4rem; height: 3.4rem; display: grid; place-items: center; border-radius: 16px; background: rgba(0, 180, 216, 0.14); color: var(--accent); font-size: 1.33rem; }
+        .tech-pill { border: 1px solid var(--border); border-radius: 999px; padding: 0.85rem 1.2rem; color: #1f2937; background: #fff; box-shadow: 0 10px 30px rgba(15,23,42,0.04); transition: transform 0.2s ease; }
+        .tech-pill:hover { transform: translateY(-3px); }
+        .engagement-card { border: 1px solid var(--border); border-radius: 24px; padding: 2rem; background: #fff; transition: transform 0.25s ease, border-color 0.25s ease; }
+        .engagement-card:hover { transform: translateY(-6px); border-color: rgba(0, 180, 216, 0.35); }
+        .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 0.2rem rgba(0, 180, 216, 0.18); }
+        .footer { padding: 4rem 0 2rem; background: linear-gradient(135deg, #020b8f 0%, #0818e5 55%, #02155e 100%); color: rgba(255,255,255,0.92); }
+        .footer h5 { color: #ffffff; margin-bottom: 1.4rem; font-weight: 700; letter-spacing: 0.01em; }
+        .footer p, .footer li, .footer small, .footer a, .footer .form-text { color: rgba(255,255,255,0.82); }
+        .footer a { color: rgba(255,255,255,0.82); text-decoration: none; }
+        .footer a:hover { color: #ffffff; text-decoration: none; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.55rem; font-size: 0.95rem; }
+        .footer-links li::before { content: '›'; color: #ff621f; font-weight: 700; }
+        .footer-newsletter .form-control { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #ffffff; }
+        .footer-newsletter .form-control::placeholder { color: rgba(255,255,255,0.68); }
+        .footer-newsletter .form-control:focus { background: rgba(255,255,255,0.12); border-color: #ff621f; box-shadow: none; color: #ffffff; }
+        .footer-newsletter .btn-primary { background: #ff621f; border: none; padding: 0.95rem 1.5rem; font-weight: 600; }
+        .footer-newsletter .btn-primary:hover { background: #e35417; }
+        .footer-divider { border-color: rgba(255,255,255,0.18); opacity: 0.35; }
+        .footer .social-list { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: flex-end; }
+        .footer .social-list a { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); color: #ffffff; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+        .footer .social-list a:hover { background: rgba(255,255,255,0.14); color: #ff621f; transform: translateY(-2px); }
+        .footer-bottom { padding-top: 1.5rem; }
+        @media (max-width: 767px) { .footer .text-md-end { text-align: center !important; } .footer .social-list { justify-content: center; } .footer-newsletter .input-group { flex-wrap: wrap; gap: 0.75rem; } .footer-newsletter .btn-primary { width: 100%; } }
+        .form-alert { display: none; }
+        @media (max-width: 991px) { .hero { padding-top: 6rem; padding-bottom: 5rem; } }
+        @media (max-width: 767px) { .hero h1 { font-size: 2.75rem; } }
+
+.navbar-custom {
+    min-height: 120px;
+    padding: 0 20px;
+}
+
+.navbar-custom .container {
+    align-items: center;
+}
+
+.navbar-custom .nav-link {
+    padding: 12px 16px;
+    font-weight: 500;
+}
+
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">MARS</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link"
+                                href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="technology-expertise.html">Technology
+                                Expertise</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="engagement-models.html">Engagement
+                                Models</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="contact.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <span class="section-subtitle">Contact</span>
+                            <h2 class="section-title">Let’s discuss your next
+                                digital initiative.</h2>
+                            <p class="section-text mx-auto">Share your idea and
+                                we’ll recommend the best way to build it with
+                                our software delivery expertise.</p>
+                        </div>
+                        <div class="card card-hero p-4">
+                            <form id="contactForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label"
+                                            for="name">Name</label>
+                                        <input type="text" class="form-control"
+                                            id="name" placeholder="Your name"
+                                            required>
+                                        <div class="invalid-feedback">Please
+                                            enter your name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label"
+                                            for="email">Email</label>
+                                        <input type="email" class="form-control"
+                                            id="email"
+                                            placeholder="name@example.com"
+                                            required>
+                                        <div class="invalid-feedback">Please
+                                            enter a valid email.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label"
+                                            for="message">Message</label>
+                                        <textarea class="form-control"
+                                            id="message" rows="5"
+                                            placeholder="Tell us about your project"
+                                            required></textarea>
+                                        <div class="invalid-feedback">Please
+                                            enter a message.</div>
+                                    </div>
+                                </div>
+                                <div class="form-alert alert alert-success mt-4"
+                                    role="alert" id="successMessage">Thank you!
+                                    Your message has been submitted.</div>
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg mt-4">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <h5>MARS</h5>
+                        <p class="mb-3">MARS Telecom Systems Pvt.
+                            Ltd.<br>Hyderabad – 500 081, Telangana, India</p>
+                        <p class="mb-1"><strong>Phone:</strong> <a
+                                href="tel:+155895548855">+1 5589 55488
+                                55</a></p>
+                        <p class="mb-3"><strong>Email:</strong> <a
+                                href="mailto:info@mars-india.com">info@mars-india.com</a></p>
+                        <div class="social-list">
+                            <a href="#" aria-label="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <h5>Useful Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="technology-expertise.html">Technology
+                                    Expertise</a></li>
+                            <li><a href="engagement-models.html">Engagement
+                                    Models</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <h5>Our Services</h5>
+                        <ul class="footer-links">
+                            <li>Web Design</li>
+                            <li>Web Development</li>
+                            <li>Product Management</li>
+                            <li>Marketing</li>
+                            <li>Graphic Design</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Our Newsletter</h5>
+                        <p>Subscribe to our newsletter and receive the latest
+                            news about our products and services!</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control"
+                                    placeholder="Enter your email"
+                                    aria-label="Email address">
+                                <button class="btn btn-primary"
+                                    type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-white">© Copyright
+                            <strong>Mars</strong> All Rights Reserved</div>
+                        <div class="col-md-6 text-md-end text-white">Designed by
+                            <strong>Mars</strong> Distributed by
+                            <strong>Mars</strong></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {{
+            const form = document.getElementById('contactForm');
+            if (form) {{
+                const successMessage = document.getElementById('successMessage');
+                form.addEventListener('submit', function (event) {{
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const name = document.getElementById('name');
+                    const email = document.getElementById('email');
+                    const message = document.getElementById('message');
+                    let valid = true;
+                    [name, email, message].forEach(field => {{
+                        if (!field.value.trim()) {{
+                            field.classList.add('is-invalid');
+                            valid = false;
+                        }} else {{
+                            field.classList.remove('is-invalid');
+                            field.classList.add('is-valid');
+                        }}
+                    }});
+                    if (email.value && !/^\S+@\S+\.\S+$/.test(email.value)) {{
+                        email.classList.add('is-invalid');
+                        email.classList.remove('is-valid');
+                        valid = false;
+                    }}
+                    if (valid) {{
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        form.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+                    }} else {{
+                        successMessage.style.display = 'none';
+                    }}
+                }});
+            }}
+        }});
+    </script>
+    </body>
+</html>

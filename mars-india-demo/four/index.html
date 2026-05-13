@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MARS-India | IT Solutions, IT Consulting, Telecom Services, Network Management, Outsourcing</title>
+
+	<meta name="Description" content="MARS is a fast-growing outsourced software product development company offering product development services and offshore development centres for its clients in the areas of Custom Application Development across multiple domains with specialization in Telecom, Networking and Converged Applications.">
+	<meta name="Keywords" content="MARS IT Solutions, MARS IT Consulting, MARS Telecom Services, MARS Network Management, Outsourced Product Development, New Product Development, Continuing Engineering, Emerging Technologies, Technical Support">
+	<meta name="Author" content="MARS">
+
+  <!-- Favicons 
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+-->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+	.section-title {
+		padding-bottom: 30px !important;
+		position: relative;
+	}
+	p{
+		text-align:justify;
+	}
+	.imsize{
+		margin-top:2% !important;
+		height:450px !important;
+	}
+	/* Closed state 
+	.accordion-button {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}
+	*/
+	.accordion-button {
+		background-color: #0110f7 !important;
+		color: #fff !important;
+	}
+
+	/* Open state 
+	.accordion-button:not(.collapsed) {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}
+	*/
+	
+	.accordion-button:not(.collapsed) {
+		background-color: ##0110f7 !important;
+		color: #fff !important;
+	}
+
+	/* Arrow icon color */
+	.accordion-button::after {
+		filter: brightness(0) invert(1); /* makes icon white */
+	}
+	
+	
+.dark-background {
+    --background-color: #0d06f4 !important;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #28323a;
+    --contrast-color: #ffffff;
+}
+
+.scrolled .header {
+    --background-color: rgba(12, 5, 255, 0.85) !important; 
+}
+
+
+
+/*  #002b5bd1
+
+.dark-background {
+    --background-color: #0d06f4; //#0d06f4
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #28323a;
+    --contrast-color: #ffffff;
+}
+
+.scrolled .header {
+    --background-color: rgba(21, 34, 43, 0.85); // rgba(12, 5, 255, 0.85); 
+}
+
+*/
+
+.navbar-custom {
+    min-height: 120px;
+    padding: 0 10px;
+}
+
+.navbar-custom .container {
+    align-items: center;
+}
+
+.navbar-custom .nav-link {
+    padding: 12px 16px;
+    font-weight: 500;
+}
+  </style>
+  
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top navbar-custom">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo 
+       <img src="assets/img/logo.png" alt="">
+	   <img class="bg-light1" src="assets/images/mars-mobile-logo.png" alt=""/>-->
+        <h1 class="sitename">MARS</h1> 
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tech-expertise">Technology expertise</a></li>
+          <li><a href="#engagement-models">Engagement Models</a></li>
+         		  
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+<!--
+      <a class="cta-btn" href="index.html#about">Get Started</a>
+-->
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center">
+        <h2 data-aos="fade-up" data-aos-delay="100">MARS Telecom Systems PVT LTD</h2>
+        <p class=" text-center" data-aos="fade-up" data-aos-delay="200">It is an established software product development solutions provider and an outsourced development and services partner with deep expertise in the telecom, networking, convergence and custom application development.</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#about" class="btn-get-started">Get Started</a>
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>MARS Telecom Systems (ISO 9001:2015 certified and CMMi Level 3 Appraised) </h3>
+            <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>MARS offers exemplary software product development and QA services to global clients and our client rely on our proven practices, global delivery models, state-of-art development centers in Hyderabad and Bangalore, India and a talented team of domain specialists ensure that the clients derive optimum return on their IT budgets.</p>
+            <p>MARS strength lies in our flexible partnering models, talented pool of experienced Software Engineers; flawless project execution and our innovative solutions are focused to augment the business value of our clients. MARS Telecom has managed several global engagements by leveraging its local market knowledge, technical expertise and experience to provide highly competent resources, excellent work culture and world-class infrastructure.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Globally, Corporates are facing challenges in terms of keeping pace with the technology and embracing cost effective newer technologies has become one of the important to strategy to stay competitive. MARS aligns its 
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Services </span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Engagements</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Capabilities</span></li>
+              </ul>
+              <p>
+                To meet these challenges and we believe that by clients enjoy multi-lateral benefits like cost-efficiency, increased focus, speed of delivery and market-worthiness of the products and solutions. With a massive R&D experience: consummate expertise, unique insights, professionalism and commitment to quality is what we bring to the table.
+              </p>
+				<p> 
+				<a class="btn btn-outline-primary" href="company-overview.html" target="_blank">Read more...</a>
+                </p>
+              <div class="position-relative mt-4">
+                <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+   
+
+    <!-- Features Section -->
+    <section id="services" class="features section">
+     <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>OUR SERVICES</p>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Success of any Enterprise.</h3>
+                <p class="fst-italic">
+                 IT services at the right value and required speed has become mandatory for success of any enterprise. Increasingly, enterprises are facing the challenge of meeting their customers dynamic needs cost effectively. Hence, accelerated time to market and cost effective and appropriate IT solutions plays an important role to achieve their objectives and be competitive in the market place. MARS with its vast experience in developing and deploying best in class IT solutions helps its customers to enhance their product portfolio, drive business transformation and genuine business results.
+                </p>
+          
+                <p>
+                 Since inception, MARS continues to be a client focused company. Our ability to evolve continuously, doubled with our flexible approach towards dynamic business world has helped us to gain success providing solutions to complex business scenarios to our global clients be it a start-up company or an established business entity. Our team constantly tries to understand the strategic technology needs of our clients to build business and technology solutions enabling them to achieve their objectives. Our commitment to quality and constant focus on the deliverables helps our clients to rely on us for quality and predictable outcome. Whether your requirements are simple or complex, our approach would be to work on the requirements as hard as you would with the same passion as your engineers would. We believe that we succeed when our clients succeed by growing and outpacing their competition. MARS IT Services provides its clients access to process excellence, deep technology expertise and an experienced pool of resources.
+                </p>
+                <p> 
+				<a class="btn btn-outline-primary" href="service-details.html" target="_blank">Read more...</a>
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/images/services.jpg" alt=""  class="img-fluid imsize">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Features Section -->
+    <section id="tech-expertise" class="features section section light-background">
+		<!-- Section Title -->
+		<div class="container section-title" data-aos="fade-up">
+			<h2>Technology Expertise</h2>
+			<p>OUR TECHNOLOGY EXPERTISE</p>
+		</div><!-- End Section Title -->
+	  
+		<div class="container">       
+			<div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+				<div class="tab-pane fade active show" id="features-tab-11">
+					<div class="row">
+						<div class="col-lg-8 order-2 order-lg-1 mt-3 mt-lg-0">
+							<h3>Technology Solutions.</h3>
+							<p class="fst-italic">
+							 Today businesses thrive on global, forward-thinking strategies programmed into high-end technology solutions. Businesses want solutions based on innovative concepts that should give them leverage over their competitors. These solutions should be agile enough to respond to inevitable changes and should have an ability to deliver quick results amid various industry challenges.
+							</p>
+							
+							<p>
+							  We, at MARS, drive businesses to success by giving them the much required edge in the industry. By delivering all kinds of solutions from enterprise-based applications to custom-made eCommerce applications, MARS creates new opportunities, streamlines processes, and integrates operations. The skilful experts at MARS are your right technology partners, who can help you maximize process improvement and operational savings by implementing best Web solutions designed for your business needs.
+							</p>
+							
+							<p>
+							MARS's eBusiness consulting solutions deliver measurable value, incorporating a broad range of technologies. We build and implement end-to-end e-Business services and solutions that seamlessly integrate with diverse business applications. For example, MARS's portfolio of successful Web projects includes Web Portals for eGovernance, License Management Systems, Social Networking sites, Customer relationship management applications, Content management and Workflow solutions, eLearnings portals, storefronts, integration with back-end applications, Web-enabling of legacy applications, and ERP systems integration with Web applications.
+							</p>
+							
+							<p>Our Web solutions bring together expertise in middleware integration, application servers, portal development frameworks, and content management solutions, on the latest technology platforms such as Microsoft .NET and J2EE.
+							</p>
+														
+							<p> 
+							<a class="btn btn-outline-primary" href="technology-details.html" target="_blank">Read more...</a>
+							</p>
+						</div>
+						<div class="col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
+							<div class="accordion" id="accordionExample">
+
+								<!-- Item 1 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOne">
+										<button class="accordion-button accordion-button-light collapsed bg-dark text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseOne">
+											Custom Application Development & Integration
+										</button>
+									</h2>
+									<div id="collapseOne" class="accordion-collapse collapse show"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											MARS is an offshore software development company with expertise in custom application development for a wide range of industries - from Information Technology & Communications, Construction & Manufacturing, Automotive/Transportation, Financial Services, Healthcare, Education, Government Organizations and NGO's to Fashion, Footwear, Food & Beverage, Retail and many more. Read More...
+										</div>
+									</div>
+								</div>
+
+								<!-- Item 2 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwo">
+										<button class="accordion-button collapsed bg-primary text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+											Application Maintenance
+										</button>
+									</h2>
+									<div id="collapseTwo" class="accordion-collapse collapse"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											At MARS, we understand just how much of your IT budget is being allocated towards maintaining applications. According to a leading market research firm, 'keeping the lights on' takes up to a whopping 80 percent of IT budgets. We also understand the logistical challenges involved in supporting obsolete technology and software. Read More...
+										</div>
+									</div>
+								</div>
+
+								<!-- Item 3 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThree">
+										<button class="accordion-button collapsed bg-primary text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseThree">
+											Microsoft Technologies
+										</button>
+									</h2>
+									<div id="collapseThree" class="accordion-collapse collapse"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											MARS has in-depth experience in architecting solutions around Microsoft suite of technologies. Our Microsoft development expertise includes Custom application development using .NET, SharePoint, CMS etc. Read More...
+										</div>
+									</div>
+								</div>
+								
+								<!-- Item 4 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFour">
+										<button class="accordion-button collapsed bg-primary text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseFour">
+											Java J2EE Technologies
+										</button>
+									</h2>
+									<div id="collapseFour" class="accordion-collapse collapse"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											Complexity, technology and economic feasibility are the major obstacles faced by the Java application development companies. Apart from the above mentioned problems there are other obstacles related to scalability, security, and robustness of a typical java applications. Read More...
+										</div>
+									</div>
+								</div>
+								<!-- Item 5 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFive">
+										<button class="accordion-button collapsed bg-primary text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseFive">
+											User Experience Management
+										</button>
+									</h2>
+									<div id="collapseFive" class="accordion-collapse collapse"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											The team provides creative/design/support solutions for many different types of internal/external marketing, business development, and a wide variety of crucial client needs. Read More...
+										</div>
+									</div>
+								</div>
+								<!-- Item 6 -->
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingSix">
+										<button class="accordion-button collapsed bg-primary text-light" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseSix">
+											SEO Support Services
+										</button>
+									</h2>
+									<div id="collapseSix" class="accordion-collapse collapse"
+										 data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											The team provides creative/design/support solutions for many different types of internal/external marketing, business development, and a wide variety of crucial client needs. Read More...
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- End Tab Content Item -->
+			</div>
+		</div>
+		
+    </section><!-- /Features Section -->
+	
+    <!-- Features Section -->
+    <section id="engagement-models" class="features section">
+
+     <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Engagement Models</h2>
+        <p>OUR ENGAGEMENT MODELS</p>
+      </div><!-- End Section Title -->
+	  
+      <div class="container">
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-21">
+            <div class="row">
+              <div class="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3> Product Development Methodology .</h3>
+                <p class="fst-italic">
+                 MARS’s product development methodology is based on a platform of robust Global Delivery Model that leverages its various offshore development centers ably complemented by strong professional management. We understand that different clients have different needs, hence we offer them the flexibility to choose from multiple engagement models depending on their unique requirements. Our Delivery Model is backed by global delivery capabilities, which works by breaking down a project into various phases and selecting the physical location for the execution of each phase in such a manner that the time-to-market is reduced sustaining the quality at minimum costs.
+                </p>
+                
+                <p>
+                 By using a “right“ mix of these delivery models, we create a “Unique Value Model” that is efficient in delivering the solution in the most effective manner, both in terms of quality and costs, thereby making us the outsourcing partner of choice. And especially, our Engagement Models help in keeping all options open and configure a winning strategy for clients.
+                </p>    
+                <p>
+               As a result, the Return on Investment (ROI) for Offshore Product Development is maximised. A clear understanding of the clients' business drivers and demands is critical in identifying an appropriate engagement strategy. Some key decision factors are:
+                </p>
+				    <ul>
+                  <li><i class="bi bi-chevron-right"></i>
+                    <span>The type of offshore work required.</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> 
+				  <span>The size and estimated growth rate of the offshore team.</span>
+				  </li>
+                  <li><i class="bi bi-chevron-right"></i> 
+				  <span>
+					Immediate business objectives (e.g. reducing time to market or reducing costs or augmenting skill sets)
+				  </span>
+				  </li>
+				  <li><i class="bi bi-chevron-right"></i> 
+				  <span>
+					Long term goals
+				  </span>
+				  </li>
+                </ul>
+				  <p> 
+				<a class="btn btn-outline-primary" href="engagement-models.html" target="_blank">Read more...</a>
+                </p>
+              </div>
+             
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Drop us a line so that we can hear from you</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <h3>HYDERABAD</h3>
+                  <p>MARS Telecom Systems Pvt. Ltd.</p>
+					<p>7th Floor, Building # H07, </p>
+					<p>aVance Business Hub, Phoenix Infocity SEZ.</p>
+					<p>Hitec City 2, HYDERABAD 500081.Telangana, India.</p>				
+					<p>Fax: +91 - 40 - 30995237</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 - 40 - 67685555 / 5556 / 5557</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@mars-india.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background" style="background-color:#0a0a0a !important;">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MARS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>MARS Telecom Systems Pvt. Ltd.</p>
+            <p>Hyderabad – 500 081, Telangana, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@mars-india.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#tech-expertise">Technology Expertise</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#engagement-models">Engagement Models</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mars</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://mars-india.com/">Mars</a> Distributed by <a href=“https://mars-india.com>Mars
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Dewi Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+  .nav-pills .nav-link {
+		text-align: left;
+		color:#0a0a0a;
+		font-weight:bold;
+		margin-bottom: 10px;
+	}
+	
+	/* Closed state 
+	.accordion-button {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}*/
+
+	/* Open state 
+	.accordion-button:not(.collapsed) {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}*/
+
+	/* Arrow icon color */
+	.accordion-button::after {
+		filter: brightness(0) invert(1); /* makes icon white */
+	}
+	
+	
+	/* Active state → only left edge colored */
+#serviceTabs .nav-link.active {
+    background: none !important;
+    color: #ff4a17;
+    border-left: 5px solid #ff4a17;
+}
+
+/* Optional hover effect */
+#serviceTabs .nav-link:hover {
+    border-left: 5px solid #ff4a17;
+    color: #ff4a17;
+}
+
+
+
+
+
+/* colors changed to blue */
+
+	.accordion-button {
+		background-color: #0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.accordion-button:not(.collapsed) {
+		background-color: ##0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.dark-background {
+		--background-color: #0d06f4 !important;
+		--default-color: #ffffff;
+		--heading-color: #ffffff;
+		--surface-color: #28323a;
+		--contrast-color: #ffffff;
+	}
+
+	.scrolled .header {
+		--background-color: rgba(12, 5, 255, 0.85) !important; 
+	}
+	
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">MARS</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#tech-expertise">Technology Expertise</a></li>
+          <li><a href="index.html#engagement-models">Engagement Models</a></li>       
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+     <!--  <a class="cta-btn" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+      <div class="container position-relative">
+        <h1>Technology Expertise</h1>
+        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Technology Expertise</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+   <!-- Service Details Section -->
+		<section id="service-details" class="service-details section">
+
+			<div class="container">
+				<div class="row gy-4">
+
+					<!-- LEFT SIDE MENU -->
+					<div class="col-lg-3">
+						<div class="nav flex-column nav-pills" id="serviceTabs" role="tablist">
+
+							<button class="nav-link active" data-bs-toggle="pill" data-bs-target="#telecom" type="button">
+								Telecom
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#datacom" type="button">
+								Datacom
+							</button>
+							
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#modems" type="button">
+								Modems
+							</button>
+							
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#broadband_access" type="button">
+								Broadband Access
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#embeded_software_development" type="button">
+								Embeded Software Development
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#nms" type="button">
+								NMS
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#ipv6_readiness" type="button">
+								IPv6 Readiness
+							</button>
+							
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#application_development" type="button">
+								Application Development
+							</button>
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#e_governance" type="button">
+								e-Governance
+							</button>
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#mobile_computing" type="button">
+								Mobile Computing
+							</button>
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#cloud" type="button">
+								Cloud
+							</button>
+
+						</div>
+					</div>
+
+					<!-- RIGHT SIDE CONTENT -->
+					<div class="col-lg-9">
+						<div class="tab-content">       
+							<!-- PAGE 2 -->
+							<div class="tab-pane fade show active" id="telecom">
+								<h3>Telecom</h3>
+								
+								<h4>Telecom / VoIP</h4>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>
+							</div>
+							 <!-- PAGE 1 -->
+							<div class="tab-pane fade" id="datacom">
+								<h3>Datacom</h3>
+								<p>
+									Datacom is the emerging technology area in which MARS has been offering consulting / Engineering services. Experienced engineers at MARS work with world class product development companies to engineer high quality products and software. MARS' service offerings in the Datacom domain range from designing the system as per customer requirements, to providing maintenance and support services for their existing product lines. We have all the needed software engineering expertise for various Datacom network elements. We offer expertise for full life-cycle software development, right from product definition/requirements, system design, detailed engineering, implementation and testing, post delivery support and complete project management.
+								</p>
+								<h4>Our offerings include:</h4>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>
+							</div>
+							<!-- PAGE 3 -->
+							<div class="tab-pane fade" id="modems">
+								<h3>Modems</h3>
+								
+								<p>
+									Mars has an experienced team which provides a good knowledgebase in various features that are essential in the development of carrier class equipment products such as Residential Modem and Gateways, Transport and Termination Devices and Wireless Access Points.
+								</p>
+								<h4>Engineering division at Mars is having enormous and diversified expertise in development of all the protocols and features that are involved in the development of an efficient broadband router:</h4>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>								  							
+							</div>
+							<!-- PAGE 4 -->
+							<div class="tab-pane fade" id="broadband_access">
+								<h3> Broadband Access</h3>
+								<p>
+									Broadband Access technologies provide high speed, always on communication between homes and businesses with the Internet. Broadband access technologies enable Triple play service viz. voice, video and other multimedia communication practical for homes and businesses.
+								</p>
+								<p>
+									At Mars we are responsible for developing and testing the various flavors of Broadband aka High Speed Internet. Our Product solutions cater to the requirement of asymmetric ADSL2 and ADSL2plus, as well as Annex A, B, and C standards to meet all Global DSL market needs.
+								</p>
+								<h3>Feature Highlights:</h3>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>	
+							</div>
+							<!-- PAGE 5 -->
+							<div class="tab-pane fade" id="embeded_software_development">
+								<h3>Embedded Software Development</h3>
+								<p>
+									Notice how your fears of upgrading to new OS or worries about porting to a new hardware get resolved when you seek our expert opinion from the embedded software development team.
+								</p>
+								<p>
+									We specialize in adapting your existing products to talk to new software Os upgrades thus helping you stay ahead of your competitors in relishing those new features the OS has to offer. This gives a tremendous leverage in time to market and ease of development with feature rich OS enhancements. Come aboard, give a try !
+								</p>
+								<p>
+									Thorough understanding of hardware interfaces coupled with optimized board support package development separates the MARS Embedded Systems group from others.
+								</p>
+								<p>
+									Specializations in developing board support packages for RTOS such as VxWorks in addition to the conventional Unix platforms give the embedded systems group the leverage of working on time critical, real time systems. The team has successfully managed Major OS upgrades on the existing hardware platforms for multiple hardwares and multiple operating systems.
+								</p>
+								<p>
+									Continuously experimenting at kernel level and device driver programming gives the team an impetus to surpass its own performance benchmarks.
+								</p>
+								<h3>Embedded System Specialities:</h3>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>
+							</div>
+							<!-- PAGE 6 -->
+							<div class="tab-pane fade" id="nms">
+								<h3>Network Management</h3>
+								
+								<p>
+									Notice how your fears of upgrading to new OS or worries about porting to a new hardware get resolved when you seek our expert opinion from the embedded software development team.
+								</p>
+								<p>
+									We specialize in adapting your existing products to talk to new software Os upgrades thus helping you stay ahead of your competitors in relishing those new features the OS has to offer. This gives a tremendous leverage in time to market and ease of development with feature rich OS enhancements. Come aboard, give a try !
+								</p>
+								<p>
+									Thorough understanding of hardware interfaces coupled with optimized board support package development separates the MARS Embedded Systems group from others.
+								</p>
+								<p>
+									Specializations in developing board support packages for RTOS such as VxWorks in addition to the conventional Unix platforms give the embedded systems group the leverage of working on time critical, real time systems. The team has successfully managed Major OS upgrades on the existing hardware platforms for multiple hardwares and multiple operating systems.
+								</p>
+								<p>
+									Continuously experimenting at kernel level and device driver programming gives the team an impetus to surpass its own performance benchmarks.
+								</p>
+								<h3>Embedded System Specialities:</h3>
+								<ul>
+									<li><i class="bi bi-check"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section><!-- /Service Details Section -->
+
+  </main>
+
+   <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MARS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>MARS Telecom Systems Pvt. Ltd.</p>
+            <p>Hyderabad – 500 081, Telangana, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@mars-india.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#tech-expertise">Technology Expertise</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#engagement-models">Engagement Models</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mars</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://mars-india.com/">Mars</a> Distributed by <a href=“https://mars-india.com>Mars
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

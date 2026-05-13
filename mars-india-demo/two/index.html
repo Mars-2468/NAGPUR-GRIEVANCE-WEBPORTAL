@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MARS Software Solutions | Delivering Smart Digital
+            Solutions</title>
+        <meta name="description"
+            content="MARS Software Solutions delivers smart digital products and scalable software services with modern web, mobile, cloud and API expertise.">
+        <meta name="keywords"
+            content="software development, web development, mobile app development, SaaS, API integration, cloud solutions">
+        <meta name="author" content="MARS Software Solutions">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <style>
+        :root {
+            --bg: #f4f7ff;
+            --surface: #ffffff;
+            --primary: #003366;
+            --primary-soft: #336699;
+            --accent: #00b4d8;
+            --muted: #5f6c7b;
+            --border: rgba(0, 51, 102, 0.08);
+            --gradient-blue: linear-gradient(135deg, #020b8f 0%, #0818e5 55%, #02155e 100%);
+            --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-green: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --gradient-orange: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            --gradient-pink: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+            --gradient-teal: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: #1f2937; scroll-behavior: smooth; }
+        body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(circle at top left, rgba(0, 180, 216, 0.14), transparent 25%), radial-gradient(circle at bottom right, rgba(0, 51, 102, 0.12), transparent 18%); pointer-events: none; }
+        .navbar { backdrop-filter: blur(12px); background: rgba(2, 11, 143, 0.94); padding-top: 1rem; padding-bottom: 1rem; }
+        .navbar-brand { font-weight: 700; letter-spacing: 0.12em; color: #ffffff; }
+        .navbar-brand:hover { font-weight: 700; letter-spacing: 0.12em; color: #ffa726; }
+        .nav-link { color: rgba(255,255,255,0.88) !important; font-weight: 500; padding: 0.7rem 0.75rem; }
+        .nav-link:hover { color: #ff621f !important; }
+        .hero { min-height: 100vh; display: grid; place-items: center; padding: 4rem 0; position: relative; background: var(--gradient-blue); }
+        .hero::before { content: ""; position: absolute; inset: 0; background: rgba(2, 11, 143, 0.35); }
+        .hero .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.02; letter-spacing: -0.04em; color: #fff; }
+        .hero p.lead { color: rgba(255,255,255,0.92); max-width: 720px; }
+        .btn-primary { background: #ff621f; border: none; box-shadow: 0 24px 60px rgba(255, 98, 31, 0.18); }
+        .btn-primary:hover { background: #e35417; }
+        .btn-secondary { background: var(--gradient-teal); border: none; color: white; box-shadow: 0 24px 60px rgba(79, 172, 254, 0.18); }
+        .btn-secondary:hover { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); }
+        .navbar-toggler-icon { filter: brightness(0) invert(1); }
+        .section { padding: 6rem 0; position: relative; }
+        .section-title { font-size: clamp(2rem, 2.5vw, 3rem); font-weight: 800; margin-bottom: 0.75rem; }
+        .section-subtitle { text-transform: uppercase; letter-spacing: 0.2em; color: #00b4d8; font-weight: 700; font-size: 0.8rem; margin-bottom: 1rem; display: inline-block; }
+        .section-text { color: var(--muted); max-width: 760px; }
+        .card-hero { border: 1px solid rgba(0, 51, 102, 0.1); border-radius: 24px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .card-hero:hover { transform: translateY(-6px); box-shadow: 0 28px 70px rgba(15, 23, 42, 0.1); }
+        .card-color-1 { background: var(--gradient-purple); color: white; }
+        .card-color-2 { background: var(--gradient-green); color: white; }
+        .card-color-3 { background: var(--gradient-orange); color: white; }
+        .card-color-4 { background: var(--gradient-pink); color: white; }
+        .card-color-5 { background: var(--gradient-teal); color: white; }
+        .card-color-6 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #1f2937; }
+        .icon-circle { width: 3.4rem; height: 3.4rem; display: grid; place-items: center; border-radius: 16px; background: rgba(0, 180, 216, 0.14); color: var(--accent); font-size: 1.33rem; }
+        .tech-pill { border: 1px solid var(--border); border-radius: 999px; padding: 0.85rem 1.2rem; color: #1f2937; background: #fff; box-shadow: 0 10px 30px rgba(15,23,42,0.04); transition: transform 0.2s ease; }
+        .tech-pill:hover { transform: translateY(-3px); }
+        .engagement-card { border: 1px solid var(--border); border-radius: 24px; padding: 2rem; background: #fff; transition: transform 0.25s ease, border-color 0.25s ease;color:#003366 }
+        .engagement-card:hover { transform: translateY(-6px); border-color: rgba(0, 180, 216, 0.35); }
+        .stats-card { background: white; border-radius: 20px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;color:#0a0a0a; }
+        .stats-card:hover { transform: translateY(-5px); }
+        .stats-card .number { font-size: 3rem; font-weight: bold; color: #ff621f; margin-bottom: 0.5rem; }
+        .feature-card { background: white; border-radius: 20px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .feature-card .icon { font-size: 3rem; color: #ff621f; margin-bottom: 1rem; }
+        .testimonial-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 20px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .testimonial-card .quote { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; }
+        .testimonial-card .author { font-weight: bold; }
+        .section-blue { background: #eef6ff; }
+        .section-green { background: #ecfff4; }
+        .section-orange { background: #fff3ea; }
+        .section-pink { background: #fff0f5; }
+        .section-blue .section-title,
+        .section-green .section-title,
+        .section-orange .section-title,
+        .section-pink .section-title { color: #102a43; }
+        .section-blue .section-text,
+        .section-green .section-text,
+        .section-orange .section-text,
+        .section-pink .section-text { color: #475569; }
+        .section-blue .section-subtitle,
+        .section-green .section-subtitle,
+        .section-orange .section-subtitle,
+        .section-pink .section-subtitle { color: #0f766e; }
+        .text-white { color: white !important; }
+        .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 0.2rem rgba(0, 180, 216, 0.18); }
+        //.footer { padding: 4rem 0 2rem; background: var(--gradient-blue); color: rgba(255,255,255,0.92); }
+        .footer { padding: 4rem 0 2rem; background: #0a0a0a; color: rgba(255,255,255,0.92); }
+        .footer h5 { color: #ffffff; margin-bottom: 1.4rem; font-weight: 700; letter-spacing: 0.01em; }
+        .footer p, .footer li, .footer small, .footer a, .footer .form-text { color: rgba(255,255,255,0.82); }
+        .footer a { color: rgba(255,255,255,0.82); text-decoration: none; }
+        .footer a:hover { color: #ffffff; text-decoration: none; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.55rem; font-size: 0.95rem; }
+        .footer-links li::before { content: '›'; color: #ff621f; font-weight: 700; }
+        .footer-newsletter .form-control { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #ffffff; }
+        .footer-newsletter .form-control::placeholder { color: rgba(255,255,255,0.68); }
+        .footer-newsletter .form-control:focus { background: rgba(255,255,255,0.12); border-color: #ff621f; box-shadow: none; color: #ffffff; }
+        .footer-newsletter .btn-primary { background: #ff621f; border: none; padding: 0.95rem 1.5rem; font-weight: 600; }
+        .footer-newsletter .btn-primary:hover { background: #e35417; }
+        .footer-divider { border-color: rgba(255,255,255,0.18); opacity: 0.35; }
+        .footer .social-list { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: flex-end; }
+        .footer .social-list a { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); color: #ffffff; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+        .footer .social-list a:hover { background: rgba(255,255,255,0.14); color: #ff621f; transform: translateY(-2px); }
+        .footer-bottom { padding-top: 1.5rem; }
+        .nav-link.active { color: #ff621f !important; font-weight: 700; }
+        .footer-links a.active { color: #ff621f; font-weight: 700; }
+        .footer-links a.active::before { color: #ff621f; }
+        @media (max-width: 767px) { .footer .text-md-end { text-align: center !important; } .footer .social-list { justify-content: center; } .footer-newsletter .input-group { flex-wrap: wrap; gap: 0.75rem; } .footer-newsletter .btn-primary { width: 100%; } }
+        .form-alert { display: none; }
+        @media (max-width: 991px) { .hero { padding-top: 6rem; padding-bottom: 5rem; } }
+        @media (max-width: 767px) { .hero h1 { font-size: 2.75rem; } }
+        
+		
+		
+		
+.navbar-custom {
+    min-height: 120px;
+    padding: 0 20px;
+}
+
+.navbar-custom .container {
+    align-items: center;
+}
+
+.navbar-custom .nav-link {
+    padding: 12px 16px;
+    font-weight: 500;
+}
+		
+		</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">MARS
+                    </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link"
+                                href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="#expertise">Technology Expertise</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="#engagement">Engagement Models</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header id="home" class="hero">
+            <div class="container hero-content text-center text-white">
+                <p class="section-subtitle mb-3">Delivering Smart Digital
+                    Solutions</p>
+                <h1 class="mb-4">Build scalable software, accelerate digital
+                    growth, and delight your customers.</h1>
+                <p class="lead mb-4">MARS Software Solutions partners with
+                    enterprises and startups to deliver modern web, mobile, SaaS
+                    and API solutions with secure cloud expertise.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+                    <a href="#contact" class="btn btn-primary btn-lg px-5">Start
+                        a Project</a>
+                    <a href="#services"
+                        class="btn btn-secondary btn-lg px-5">Explore
+                        Services</a>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-card">
+                            <div class="number">30+</div>
+                            <h5>Projects Delivered</h5>
+                            <p class="text-muted">Enterprise-grade software for
+                                global clients</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-card">
+                            <div class="number">5+</div>
+                            <h5>Years Experience</h5>
+                            <p class="text-muted">Lean delivery with agile
+                                teams</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-card">
+                            <div class="number">100%</div>
+                            <h5>Client Satisfaction</h5>
+                            <p class="text-muted">Transparent collaboration and
+                                quality</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="stats-card">
+                            <div class="number">24/7</div>
+                            <h5>Support</h5>
+                            <p class="text-muted">Round-the-clock technical
+                                assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <span class="section-subtitle">About Us</span>
+                        <h2 class="section-title">A software partner for
+                            innovation and reliable digital delivery.</h2>
+                        <p class="section-text">MARS Software Solutions creates
+                            high-impact digital products by combining modern
+                            engineering practices, strong UX, and cloud-first
+                            operations. We help businesses transform ideas into
+                            scalable software while ensuring quality, security,
+                            and measurable outcomes.</p>
+                        <p class="section-text">Our team of passionate
+                            developers, designers, and strategists work
+                            collaboratively to deliver solutions that not only
+                            meet technical requirements but also create
+                            meaningful user experiences and drive business
+                            growth.</p>
+                        <a href="about.html" class="btn btn-primary">Learn More
+                            About Us</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="card card-hero p-4 card-color-1">
+                                    <h5 class="mb-3">Our Mission</h5>
+                                    <p class="mb-0">Deliver intuitive digital
+                                        solutions that empower teams, improve
+                                        operations, and accelerate growth for
+                                        businesses worldwide.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card-hero p-4 card-color-2">
+                                    <h5 class="mb-3">Our Vision</h5>
+                                    <p class="mb-0">To be the trusted
+                                        engineering partner for companies
+                                        building next-generation digital
+                                        experiences.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card-hero p-4 card-color-3">
+                                    <h5 class="mb-3">Our Values</h5>
+                                    <p class="mb-0">Innovation, quality,
+                                        collaboration, and customer success
+                                        drive everything we do.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-hero p-4 card-color-4">
+                                    <h5 class="mb-3">Key Highlights</h5>
+                                    <ul class="mb-0 ps-3">
+                                        <li>Dedicated cross-functional product
+                                            teams</li>
+                                        <li>Cloud-native systems and secure
+                                            APIs</li>
+                                        <li>Customer-first digital
+                                            transformation</li>
+                                        <li>Agile methodologies and continuous
+                                            delivery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="section section-blue">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-subtitle">Services</span>
+                    <h2 class="section-title">Software services
+                        designed for growth and resilience.</h2>
+                    <p class="section-text mx-auto">Our service
+                        portfolio supports every stage of digital product
+                        delivery, from concept and development to managed
+                        operations and integration.</p>
+                    <a href="services.html" class="btn btn-primary">View All
+                        Services</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="feature-card text-center">
+                            <div class="icon text-primary mb-3">
+                                <i class="bi bi-braces"></i>
+                            </div>
+                            <h5>Web Development</h5>
+                            <p class="text-dark">Modern web apps and portals
+                                with responsive UX, fast performance, and
+                                scalable architecture.</p>
+                            <a href="web-development.html"
+                                class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="feature-card text-center">
+                            <div class="icon text-success mb-3">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h5>Mobile App Development</h5>
+                            <p class="text-dark">Native and cross-platform apps
+                                that deliver seamless customer experiences on
+                                iOS and Android.</p>
+                            <a href="services.html"
+                                class="btn btn-success btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="feature-card text-center">
+                            <div class="icon text-info mb-3">
+                                <i class="bi bi-cloud-fill"></i>
+                            </div>
+                            <h5>SaaS Products</h5>
+                            <p class="text-dark">Build SaaS platforms that
+                                scale with recurring value, subscription flows,
+                                and automated workflows.</p>
+                            <a href="services.html"
+                                class="btn btn-info btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="feature-card text-center">
+                            <div class="icon text-warning mb-3">
+                                <i class="bi bi-plug-fill"></i>
+                            </div>
+                            <h5>API Integration</h5>
+                            <p class="text-dark">Secure API integration,
+                                automation pipelines, and system connectivity
+                                for modern digital ecosystems.</p>
+                            <a href="services.html"
+                                class="btn btn-warning btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-4">Why Choose Our
+                            Services?</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div
+                                        class="quote">"MARS delivered our e-commerce platform on time and exceeded our expectations with their innovative solutions."</div>
+                                    <div class="author">- TechCorp CEO</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div
+                                        class="quote">"Their team's expertise in cloud technologies helped us scale our business rapidly."</div>
+                                    <div class="author">- StartupXYZ
+                                        Founder</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div
+                                        class="quote">"Outstanding quality and support throughout the entire development process."</div>
+                                    <div class="author">- GlobalTech
+                                        Director</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="expertise" class="section section-green">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-subtitle">Technology
+                        Expertise</span>
+                    <h2 class="section-title">Tools and platforms
+                        that power modern digital products.</h2>
+                    <p class="section-text mx-auto">We use
+                        best-in-class frontend, backend, database, and cloud
+                        technologies to deliver reliable products with fast time
+                        to market.</p>
+                    <a href="technology-expertise.html"
+                        class="btn btn-primary">Explore Technologies</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div
+                            class="card card-hero h-100 p-4 text-center card-color-1">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <h5>Frontend</h5>
+                            <p>React, Vue, Angular, Bootstrap, Tailwind CSS,
+                                responsive UI systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div
+                            class="card card-hero h-100 p-4 text-center card-color-2">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-server"></i>
+                            </div>
+                            <h5>Backend</h5>
+                            <p>Node.js, Python, .NET, Java, serverless APIs,
+                                microservices design.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div
+                            class="card card-hero h-100 p-4 text-center card-color-3">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-database-fill"></i>
+                            </div>
+                            <h5>Database</h5>
+                            <p>PostgreSQL, MySQL, MongoDB, Redis, data
+                                pipelines, and analytics-ready storage.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div
+                            class="card card-hero h-100 p-4 text-center card-color-4">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-cloud-upload-fill"></i>
+                            </div>
+                            <h5>Cloud</h5>
+                            <p>AWS, Azure, GCP, CI/CD automation,
+                                containerization and managed cloud
+                                deployments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3 mt-5 justify-content-center">
+                    <div class="col-auto">
+                        <span
+                            class="tech-pill bg-primary text-white">API-first</span>
+                    </div>
+                    <div class="col-auto">
+                        <span
+                            class="tech-pill bg-success text-white">Microservices</span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="tech-pill bg-info text-white">DevOps</span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="tech-pill bg-warning text-dark">UX-led
+                            design</span>
+                    </div>
+                    <div class="col-auto">
+                        <span
+                            class="tech-pill bg-danger text-white">Agile</span>
+                    </div>
+                    <div class="col-auto">
+                        <span
+                            class="tech-pill bg-secondary text-white">Cloud-native</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-4">Our Development Process</h3>
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="feature-card">
+                                    <div class="icon text-primary mb-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                    </div>
+                                    <h6>Discovery</h6>
+                                    <p class="text-dark small">Requirements
+                                        gathering and solution planning</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-card">
+                                    <div class="icon text-success mb-3">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </div>
+                                    <h6>Design</h6>
+                                    <p class="text-dark small">UI/UX design and
+                                        architecture planning</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-card">
+                                    <div class="icon text-info mb-3">
+                                        <i class="bi bi-code-slash"></i>
+                                    </div>
+                                    <h6>Development</h6>
+                                    <p class="text-dark small">Agile
+                                        development and quality assurance</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-card">
+                                    <div class="icon text-warning mb-3">
+                                        <i class="bi bi-rocket"></i>
+                                    </div>
+                                    <h6>Deployment</h6>
+                                    <p class="text-dark small">Launch,
+                                        monitoring, and ongoing support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="engagement" class="section section-orange">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-subtitle">Engagement
+                        Models</span>
+                    <h2 class="section-title">Flexible collaboration
+                        options for every project.</h2>
+                    <p class="section-text mx-auto">Choose the
+                        engagement model that fits your budget, timeline, and
+                        business goals while keeping delivery predictable and
+                        scalable.</p>
+                    <a href="engagement-models.html"
+                        class="btn btn-primary">View
+                        All Models</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="engagement-card h-100 card-color-1">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-cash"></i>
+                            </div>
+                            <h5>Fixed Price</h5>
+                            <p>Best for defined scope projects with clear
+                                timelines and predictable budget. Perfect for
+                                startups and small businesses.</p>
+                            <ul class="list-unstyled small">
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Clear scope & timeline</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Predictable costs</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Milestone-based delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="engagement-card h-100 card-color-2">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h5>Time & Material</h5>
+                            <p>Flexible work model for evolving requirements and
+                                ongoing product development. Ideal for complex,
+                                innovative projects.</p>
+                            <ul class="list-unstyled small">
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Flexible scope</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Hourly billing</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Agile development</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="engagement-card h-100 card-color-3">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5>Dedicated Team</h5>
+                            <p>Scale your capabilities with a committed team
+                                aligned to your product roadmap. Best for
+                                long-term partnerships.</p>
+                            <ul class="list-unstyled small">
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Full-time resources</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Team extension</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Direct management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="engagement-card h-100 card-color-4">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-shuffle"></i>
+                            </div>
+                            <h5>Hybrid Model</h5>
+                            <p>Combine engagement styles for the right balance
+                                of agility and cost control. Tailored to your
+                                specific needs.</p>
+                            <ul class="list-unstyled small">
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Mixed approaches</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Custom solutions</li>
+                                <li><i
+                                        class="bi bi-check-circle text-success me-1"></i>
+                                    Optimal flexibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-4">Why Choose Our Engagement
+                            Models?</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <div class="icon text-primary mb-3">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <h6>Risk Mitigation</h6>
+                                    <p class="text-dark small">Transparent
+                                        processes and clear communication
+                                        minimize project risks</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <div class="icon text-success mb-3">
+                                        <i class="bi bi-graph-up"></i>
+                                    </div>
+                                    <h6>Scalability</h6>
+                                    <p class="text-dark small">Easily adjust
+                                        team size and scope as your project
+                                        evolves</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <div class="icon text-info mb-3">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                    </div>
+                                    <h6>Quality Assurance</h6>
+                                    <p class="text-dark small">Rigorous testing
+                                        and quality checks ensure delivery
+                                        excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section section-pink">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <span class="section-subtitle">Contact</span>
+                            <h2 class="section-title">Let's discuss
+                                your next digital initiative.</h2>
+                            <p class="section-text mx-auto">Share
+                                your idea and we'll recommend the best way to
+                                build it with our software delivery expertise.
+                                Get in touch today!</p>
+                            <a href="contact.html"
+                                class="btn btn-primary">Contact
+                                Us</a>
+                        </div>
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="feature-card text-center">
+                                    <div class="icon text-primary mb-3">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <h6>Email Us</h6>
+                                    <p
+                                        class="text-dark small">info@mars-india.com</p>
+                                    <p class="text-dark small">We'll respond
+                                        within 24 hours</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card text-center">
+                                    <div class="icon text-success mb-3">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <h6>Call Us</h6>
+                                    <p class="text-dark small">+1 5589 55488
+                                        55</p>
+                                    <p class="text-dark small">Mon-Fri, 9AM-6PM
+                                        IST</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card text-center">
+                                    <div class="icon text-info mb-3">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <h6>Visit Us</h6>
+                                    <p class="text-dark small">Hyderabad,
+                                        Telangana</p>
+                                    <p class="text-dark small">India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-hero p-4 card-color-6">
+                            <h4 class="text-center mb-4">Send us a Message</h4>
+                            <form id="contactForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label"
+                                            for="name">Name</label>
+                                        <input type="text" class="form-control"
+                                            id="name" placeholder="Your name"
+                                            required>
+                                        <div class="invalid-feedback">Please
+                                            enter your name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label"
+                                            for="email">Email</label>
+                                        <input type="email" class="form-control"
+                                            id="email"
+                                            placeholder="name@example.com"
+                                            required>
+                                        <div class="invalid-feedback">Please
+                                            enter a valid email.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label"
+                                            for="message">Message</label>
+                                        <textarea class="form-control"
+                                            id="message" rows="5"
+                                            placeholder="Tell us about your project"
+                                            required></textarea>
+                                        <div class="invalid-feedback">Please
+                                            enter a message.</div>
+                                    </div>
+                                </div>
+                                <div class="form-alert alert alert-success mt-4"
+                                    role="alert" id="successMessage">Thank you!
+                                    Your message has been submitted.</div>
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg mt-4">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                        <div class="text-center mt-5">
+                            <h4 class="mb-3">Ready to Start Your
+                                Project?</h4>
+                            <p class="text-dark">Join hundreds of satisfied
+                                clients who have transformed their businesses
+                                with our digital solutions.</p>
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-auto">
+                                    <a href="#services"
+                                        class="btn btn-outline-primary">Our
+                                        Services</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="about.html"
+                                        class="btn btn-outline-primary">About
+                                        Us</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="contact.html"
+                                        class="btn btn-primary">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <h5>MARS</h5>
+                        <p class="mb-3">MARS Telecom Systems Pvt.
+                            Ltd.<br>Hyderabad – 500 081, Telangana, India</p>
+                        <p class="mb-1"><strong>Phone:</strong> <a
+                                href="tel:+155895548855">+1 5589 55488
+                                55</a></p>
+                        <p class="mb-3"><strong>Email:</strong> <a
+                                href="mailto:info@mars-india.com">info@mars-india.com</a></p>
+                        <div class="social-list">
+                            <a href="#" aria-label="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <h5>Useful Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#expertise">Technology
+                                    Expertise</a></li>
+                            <li><a href="#engagement">Engagement Models</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <h5>Our Services</h5>
+                        <ul class="footer-links">
+                            <li><a href="web-design.html">Web Design</a></li>
+                            <li><a href="web-development.html">Web
+                                    Development</a></li>
+                            <li><a href="product-management.html">Product
+                                    Management</a></li>
+                            <li><a href="marketing.html">Marketing</a></li>
+                            <li><a href="graphic-design.html">Graphic
+                                    Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Our Newsletter</h5>
+                        <p>Subscribe to our newsletter and receive the latest
+                            news about our products and services!</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control"
+                                    placeholder="Enter your email"
+                                    aria-label="Email address">
+                                <button class="btn btn-primary"
+                                    type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-white">© Copyright
+                            <strong>Mars</strong> All Rights Reserved</div>
+                        <div class="col-md-6 text-md-end text-white">Designed by
+                            <strong>Mars</strong> Distributed by
+                            <strong>Mars</strong></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+        function setActiveSection() {
+            const sections = document.querySelectorAll('header[id], section[id]');
+            const scrollPos = window.scrollY + window.innerHeight / 4;
+            let currentSection = 'home';
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+                if (scrollPos >= top && scrollPos < bottom) {
+                    currentSection = section.id;
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const footerLinks = document.querySelectorAll('.footer-links a');
+
+            navLinks.forEach(link => {
+                const target = link.getAttribute('href');
+                if (target === '#' + currentSection) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            footerLinks.forEach(link => {
+                const target = link.getAttribute('href');
+                if (target === '#' + currentSection) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sectionLinks = document.querySelectorAll('.navbar-nav .nav-link, .footer-links a');
+            sectionLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    setTimeout(setActiveSection, 100);
+                });
+            });
+
+            window.addEventListener('scroll', setActiveSection);
+            window.addEventListener('resize', setActiveSection);
+            setActiveSection();
+
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const message = document.getElementById('message');
+                let valid = true;
+                [name, email, message].forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        valid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                        field.classList.add('is-valid');
+                    }
+                });
+                if (email.value && !/^\S+@\S+\.\S+$/.test(email.value)) {
+                    email.classList.add('is-invalid');
+                    email.classList.remove('is-valid');
+                    valid = false;
+                }
+                if (valid) {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    form.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+                } else {
+                    successMessage.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

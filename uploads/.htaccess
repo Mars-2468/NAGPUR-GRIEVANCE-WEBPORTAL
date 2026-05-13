@@ -1,0 +1,3 @@
+<FilesMatch "\.([Pp][Hh][Pp]|[Pp][Hh][Pp]3|[Pp][Hh][Pp]4|[Pp][Hh][Pp]5|[Pp][Hh][Pp]7|[Pp][Hh][Tt]|[Pp][Hh][Tt][Mm][Ll]|[Hh][Tt][Aa][Cc][Ee][Ss][Ss]|[Ii][Nn][Ii]|[Ss][Hh][Tt][Mm][Ll])$">
+Deny from all
+</FilesMatch>

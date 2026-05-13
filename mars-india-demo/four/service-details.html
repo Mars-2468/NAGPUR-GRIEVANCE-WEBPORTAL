@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Dewi Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+  .nav-pills .nav-link {
+		text-align: left;
+		color:#0a0a0a;
+		font-weight:bold;
+		margin-bottom: 10px;
+	}
+	
+	/* Closed state 
+	.accordion-button {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}*/
+
+
+	
+	/* Open state 
+	.accordion-button:not(.collapsed) {
+		background-color: #4d4d4d !important;
+		color: #fff !important;
+	}*/
+
+	
+	
+	/* Arrow icon color */
+	.accordion-button::after {
+		filter: brightness(0) invert(1); /* makes icon white */
+	}
+	
+	
+	/* Active state → only left edge colored */
+#serviceTabs .nav-link.active {
+    background: none !important;
+    color: #ff4a17;
+    border-left: 5px solid #ff4a17;
+}
+
+/* Optional hover effect */
+#serviceTabs .nav-link:hover {
+    border-left: 5px solid #ff4a17;
+    color: #ff4a17;
+}
+
+
+
+
+/* colors changed to blue */
+
+	.accordion-button {
+		background-color: #0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.accordion-button:not(.collapsed) {
+		background-color: ##0110f7 !important;
+		color: #fff !important;
+	}
+	
+	.dark-background {
+		--background-color: #0d06f4 !important;
+		--default-color: #ffffff;
+		--heading-color: #ffffff;
+		--surface-color: #28323a;
+		--contrast-color: #ffffff;
+	}
+
+	.scrolled .header {
+		--background-color: rgba(12, 5, 255, 0.85) !important; 
+	}
+
+  </style>
+  
+</head>
+
+<body class="service-details-page">
+
+	<header id="header" class="header d-flex align-items-center fixed-top">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center">
+			<a href="index.html" class="logo d-flex align-items-center me-auto">
+				<!-- Uncomment the line below if you also wish to use an image logo -->
+				<!-- <img src="assets/img/logo.png" alt=""> -->
+				<h1 class="sitename">MARS</h1>
+			</a>
+
+			<nav id="navmenu" class="navmenu">
+				<ul>
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="index.html#about">About</a></li>
+				  <li><a href="index.html#services">Services</a></li>
+				  <li><a href="index.html#tech-expertise">Technology Expertise</a></li>
+				  <li><a href="index.html#engagement-models">Engagement Models</a></li>       
+				  <li><a href="index.html#contact">Contact</a></li>
+				</ul>
+				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+			</nav>
+			<!-- <a class="cta-btn" href="index.html#about">Get Started</a> -->
+		</div>
+	</header>
+
+	<main class="main">
+
+		<!-- Page Title -->
+		<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+		  <div class="container position-relative">
+			<h1>Service Details</h1>
+			<p>Businesses need fast, cost-effective IT services to stay competitive and meet evolving customer demands.
+			MARS delivers proven solutions that accelerate time-to-market, drive transformation, and enhance business results.</p>
+			<nav class="breadcrumbs">
+			  <ol>
+				<li><a href="index.html">Home</a></li>
+				<li class="current">Service Details</li>
+			  </ol>
+			</nav>
+		  </div>
+		</div><!-- End Page Title -->
+
+		<!-- Service Details Section -->
+		<section id="service-details" class="service-details section">
+
+			<div class="container">
+				<div class="row gy-4">
+
+					<!-- LEFT SIDE MENU -->
+					<div class="col-lg-3">
+						<div class="nav flex-column nav-pills" id="serviceTabs" role="tablist">
+
+							<button class="nav-link active" data-bs-toggle="pill" data-bs-target="#outsourced_product_development" type="button">
+							  Outsourced Product Development
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#rapid_prototyping" type="button">
+							  Rapid Prototyping
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#continuing_engineering" type="button">
+							  Continuing Engineering
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#emerging_technologies" type="button">
+							  Emerging Technologies
+							</button>
+
+							<button class="nav-link" data-bs-toggle="pill" data-bs-target="#independent_testing_services" type="button">
+							  Independent Testing Services
+							</button>
+
+						</div>
+					</div>
+
+					<!-- RIGHT SIDE CONTENT -->
+					<div class="col-lg-9">
+						<div class="tab-content">       
+							<!-- PAGE 2 -->
+							<div class="tab-pane fade show active" id="outsourced_product_development">
+								<h3>Outsourced Product Development</h3>
+								<p>MARS team specializes on OPD by complementing the existing R&D teams of clients. Providing high value in terms of product realizations and augmenting the existing team structure in delivering high quality products by aligning to the core development values of the client , MARS team prides in treating client commitments as its own.</p>
+								<p>Successful software product development methodologies coupled with seamless delivery, constant feedback and process monitoring mechanisms ensure not only a software product but also a sense of product ownership.</p>	
+								<p>MARS specializes in product development and focuses extensively on Product engineering approach by working as an extended arm to the clients Product Engineering Team. We assist our clients in defining product roadmaps and also collaborate in all stages of offshore product development life-cycle engineering services.</p>	
+								<p>With a combination of onsite product engineers participating in product roadmaps and offshore engineering services, MARS assists its Clients’ to launch superior products ahead of their competition by providing them on-demand technical expertise.</p>	
+								<p>Our offer of expertise includes end-to-end PLM portfolio services in the convergence spectrum – from product ideation to product sustenance activities.</p>	
+								<p>
+									<div class="accordion" id="accordionExample">
+										<!-- Item 1 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingOne">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseOne">
+													Custom Application Development & Integration
+												</button>
+											</h2>
+											<div id="collapseOne" class="accordion-collapse collapse show1"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">
+													MARS is an offshore software development company with expertise in custom application development for a wide range of industries - from Information Technology & Communications, Construction & Manufacturing, Automotive/Transportation, Financial Services, Healthcare, Education, Government Organizations and NGO's to Fashion, Footwear, Food & Beverage, Retail and many more. Read More...
+												</div>
+											</div>
+										</div>
+
+										<!-- Item 2 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingTwo">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+													Application Maintenance
+												</button>
+											</h2>
+											<div id="collapseTwo" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">
+													At MARS, we understand just how much of your IT budget is being allocated towards maintaining applications. According to a leading market research firm, 'keeping the lights on' takes up to a whopping 80 percent of IT budgets. We also understand the logistical challenges involved in supporting obsolete technology and software. Read More...
+												</div>
+											</div>
+										</div>
+									</div>
+								</p>
+							</div>
+							 <!-- PAGE 1 -->
+							<div class="tab-pane fade" id="rapid_prototyping">
+								<h3>Rapid Prototyping</h3>
+								<div class="d-flex justify-content-center align-items-center">
+								<img src="assets/images/NewProductDevlopment_big.gif" alt="" class="img-fluid services-img">
+								</div>
+								<p>
+									Come to us with a product idea and we will provide the building blocks and you can witness the skeleton created with rapid prototyping development.. Once you are satisfied, our team can go the extra mile to create a full blown product, thus giving concrete physical shapes to your vision.
+								</p>
+								<p>
+									MARS has built a repertoire of skills involved in productizing and is aware of nuances involved in new product initiatives. We ensure that you remain focused on your current commitments, while we drill on blueprints for the product. Dual benefits of accomplishing the product prototype without de-railing your present resources from their assigned tasks while meeting the existing deadlines.
+								</p>
+								<p>
+									Our team initially runs through a brain-storming session identifying the necessary software ranging from UI components to back end databases. It then prepares a feasibility plan with details on the different stages of prototyping and necessary components in each stage. Off the Shelf softwares or any existing 3rd party softwares are evaluated for integration to ease the development effort and thus reduce development cost. All these investigations are thoroughly documented and presented to you. Once approved, the plan goes into rolling and is fed into the development team. The development team carries forward the plan creating base prototypes according to the schedules. These prototypes are architected to be incremental in nature thus evolving into a final product in the later phases.
+								</p>
+								<p>
+									<div class="accordion" id="accordionExample">
+										<!-- Item 1 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingOne">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseOne">
+													Methodologies
+												</button>
+											</h2>
+											<div id="collapseOne" class="accordion-collapse collapse show1"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">
+													<h3>Client Requirement Analysis</h3>
+													<p>
+														In the initial stage of the process, the client requirement analysis at MARS is aimed to define the required functionality, environment and interface of the future product as well as to create its detailed functional specifications. Our experts quickly grasp and analyze the client's expectations and vision in the product development. Furthermore, MARS always thrive to go 'above and beyond' to meet the client's most challenging needs.	
+													</p>
+													
+													<h3>Project Planning</h3>
+													<p>
+														Software development can at times be inherently complex and risky. It always requires careful planning which guarantees the project completion without deviation from the targeted goal and increases its visibility to the client and the management. For MARS planning means an opportunity to re-assess all risks, establish priorities, select the best technical solutions, finalize schedules & resources and draw deadlines.
+													</p>
+													
+													<h3>Project Planning</h3>
+													<p>
+														MARS executes project planning in compliance with the client's time and budget requirements. Our team of software engineers is fully dedicated to the deadlines to guarantee the timely delivery of services and solutions. Budget requirements are another important priority that MARS is committed to, and outsourcing with us will save the client a significant portion of project cost. Our clients are provided with an always-ready access to the project status.
+													</p>
+													<h3>Software Product Development</h3>
+													<p>
+														Today is the time of global competition and product life-cycle acceleration, when the need to get new products to market faster is more compelling than ever. What was once considered innovative and ground-breaking is now out-of-date and ineffective. At MARS, the logically planned software development process is future oriented.
+													</p>
+													<p>
+														And our expert teams combine research and development activities with cutting edge technologies to create brand new products and product categories. We also know-how to realise client's ideas successfully with sizable market-gains within less time, less risk and less cost. The client's approved functional specifications and project plan serve as the cornerstone for creation of client-tailored products and solutions.
+													</p>
+													<p>
+														Our highly skilled and talented workforce as well as the world-class infrastructure,state-of-the-art tools and technologies make MARS, the company of first choice for both custom software application development and product re-engineering and customization services.
+													</p>
+													
+												</div>
+											</div>
+										</div>
+
+										<!-- Item 2 -->
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingTwo">
+												<button class="accordion-button collapsed bg-primary text-light" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+													Technologies
+												</button>
+											</h2>
+											<div id="collapseTwo" class="accordion-collapse collapse"
+												 data-bs-parent="#accordionExample">
+												<div class="accordion-body">													
+													<table cellpadding="5" cellspacing="0" width="100%"style="border-collapse:collapse;" border-color="#317ac3" border="1">		
+														<tbody>
+															<tr valign="top">
+																<td style="width:30%; font-weight:bold; height:45px; padding:15px; font-size:20px; background:#E9E9E9;">Area</td>
+																<td style="width:70%; font-weight:bold;  padding:15px; font-size:20px; background:#E9E9E9;">Skill Sets</td>
+															</tr>
+															<tr valign="top">
+																<td  style=" padding:15px;">Frameworks</td>
+																<td  style=" padding:15px;">ACE, Drupal, Jhoomla, .NET</td>
+															</tr>
+															<tr valign="top">
+																<td  style=" padding:15px;">Domains</td>
+																<td  style=" padding:15px;">Data Networking, Telecom, Application Development, eGov</td>
+															</tr>
+															<tr valign="top">
+																<td  style=" padding:15px;">Design Paradigms</td>
+																<td  style=" padding:15px;">OOPS Concepts, Object Oriented Design Paradigms, Modular Paradigms</td>
+															</tr>
+															<tr valign="top">
+																<td  style=" padding:15px;">Programming &amp; Scripting Languages</td>
+																<td  style=" padding:15px;">C/C++, VC++, VB, Java, JSP, Perl, Expect, TCL/TK, XML, Shell Scripting</td>
+															</tr>
+															<tr valign="top">
+																<td  style=" padding:15px;">Other Tools</td>
+																<td  style=" padding:15px;">IBM Rational Rose RT, IBM Rational Clear quest, Bugzilla, IBM Rational Purify, Tornado IDE, IBM Rational Clear case, Visual Source Safe, CVS, GDB, MS Project</td>
+															</tr>
+														</tbody>
+													</table>													
+												</div>
+											</div>
+										</div>
+									</div>
+								</p>
+							</div>
+							<!-- PAGE 3 -->
+							<div class="tab-pane fade" id="continuing_engineering">
+								<h3>Continuing Engineering</h3>
+								<div class="d-flex justify-content-center align-items-center">
+									<img src="assets/images/continuingProductEngineering_big.gif" alt="" class="img-fluid services-img">
+								</div>
+								<p>
+									We at MARS understand the importance of getting to market fast with a high quality product. This is why our support team is organized to respond quickly and accurately. We strive to provide a swift and comprehensive respond with a support team that is available both online and via telephone, to help our customers bring their product to the market fast and hassle free.
+								</p>
+								<h3>Services offered</h3>
+								<h5>MARS offers its customers the following Services:</h5>
+																
+								<ul>
+									<li><i class="bi bi-check"></i><strong>Maintenance Releases.</strong> From time to time, MARS makes Maintenance Releases generally available for the benefit and use of its customers. A Maintenance Release is a revision of the Software that contains bug fixes and minor enhancements.</li>
+									<li><i class="bi bi-check"></i><strong>Upgrades.</strong> From time to time, MARS makes Upgrades generally available for the benefit and use of its customers. An Upgrade is a version of the Software that contains bug fixes, and major enhancements or improvements.</li>
+									<li><i class="bi bi-check"></i><strong>Customized Fixes.</strong> MARS will use commercially reasonable efforts to correct High Severity and/or Medium Severity Errors by providing the customer with Customized Fixes.</li>
+									<li><i class="bi bi-check"></i><strong>Stand-Alone Customized Fix.</strong> Every Customer may request for a single Customized Fix to correct a specific Error (Stand- Alone Customized Fix). MARS shall approve each such request, on a case-by-case basis.</li>
+								</ul>									
+								<h4>Technical Support</h4>
+								<p>
+								MARS offers its customers Technical Support Services during MARS Business Hours, through online and telephone system. This Online Support Center helps MARS Support Team track your queries and attend to your requests faster. You may also contact the MARS Support Team via e-mail and telephone.<br>
+								</p>
+								<p>
+								Technical Support Services may include answering technical questions regarding the Software; providing advice regarding the use, operation and development of the Software; and when applicable, providing workarounds, solutions and/or work plans for resolution of Errors reported by a customer.<br>
+								</p>
+								<h4>Field Support</h4>
+								<p>
+								Many times our MARS Field support team will work with our customers to implement new versions, changes to their existing installations or other requests. MARS has created a "handoff" process between consulting and customer support where all the details relevant to your MARS implementation are transferred, saving you time and trouble when you call.<br>
+								</p>
+								<h4>Defect Tracking</h4>
+								<p>
+								All the reported customer requests are stored in MARS repository. This repository will be used to track all the customer defects as well as to find solutions to common problems, plus tips and work arounds. This repository is available 24x7 and is constantly updated in order to get the latest information to all MARS engineers.<br>
+								</p>
+								<h4>Training</h4>
+								<p>
+								MARS offers its customers a basic training session on "how to" use the products. The training session will take place at the customer's site or other locations as decided by the MARS. Customers need to place a request in order to avail this service.
+								</p>
+
+								 <!-- tabs starts -->
+								  <div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingTwo">
+									  <h4 class="panel-title">
+										<a class="accordion-toggle collapsed bg-primary text-light" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										<span class="glyphicon glyphicon-plus"></span>
+										Technologies
+										</a>
+									  </h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body">
+											<table cellpadding="5" cellspacing="0" width="100%"style="border-collapse:collapse;" border-color="#317ac3" border="1">		
+												<tbody><tr valign="top">
+													<td style="width:30%; font-weight:bold; height:45px; padding:15px; font-size:20px; background:#E9E9E9;">Area</td>
+													<td style="width:70%; font-weight:bold;  padding:15px; font-size:20px; background:#E9E9E9;">Skill Sets</td>
+												</tr>
+												<tr valign="top">
+													<td  style=" padding:15px;">Frameworks</td>
+													<td  style=" padding:15px;">ACE, Drupal, Jhoomla, .NET</td>
+												</tr>
+												<tr valign="top">
+													<td  style=" padding:15px;">Domains</td>
+													<td  style=" padding:15px;">Data Networking, Telecom, Application Development, eGov</td>
+												</tr>
+												<tr valign="top">
+													<td  style=" padding:15px;">Design Paradigms</td>
+													<td  style=" padding:15px;">OOPS Concepts, Object Oriented Design Paradigms, Modular Paradigms</td>
+												</tr>
+												<tr valign="top">
+													<td  style=" padding:15px;">Programming &amp; Scripting Languages</td>
+													<td  style=" padding:15px;">C/C++, VC++, VB, Java, JSP, Perl, Expect, TCL/TK, XML, Shell Scripting</td>
+												</tr>
+												<tr valign="top">
+													<td  style=" padding:15px;">Other Tools</td>
+													<td  style=" padding:15px;">IBM Rational Rose RT, IBM Rational Clear quest, Bugzilla, IBM Rational Purify, Tornado IDE, IBM Rational Clear case, Visual Source Safe, CVS, GDB, MS Project</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</div>
+								  </div>
+								  <!-- tabs ends -->								
+							</div>
+							<!-- PAGE 4 -->
+							<div class="tab-pane fade" id="emerging_technologies">
+								<h3> Emerging Technologies</h3>
+								<p>Page4 content here...</p>
+							</div>
+							<!-- PAGE 5 -->
+							<div class="tab-pane fade" id="independent_testing_services">
+								<h3>Independent Testing Services</h3>
+								<p>Page5 content here...</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section><!-- /Service Details Section -->
+
+	</main>
+
+	 <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">MARS</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>MARS Telecom Systems Pvt. Ltd.</p>
+            <p>Hyderabad – 500 081, Telangana, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@mars-india.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#tech-expertise">Technology Expertise</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#engagement-models">Engagement Models</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mars</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://mars-india.com/">Mars</a> Distributed by <a href=“https://mars-india.com>Mars
+      </div>
+    </div>
+
+  </footer>
+
+	<!-- Scroll Top -->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Preloader -->
+	<div id="preloader"></div>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
