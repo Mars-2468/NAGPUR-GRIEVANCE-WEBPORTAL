@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Aurangabad Dashboard</title>
+    
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Libs CSS -->
+
+
+<link href="assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/libs/dropzone/dist/dropzone.css"  rel="stylesheet">
+<link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="assets/libs/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="assets/css/theme.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    
+  </head>
+
+  <body class="bg-light">
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+       <!-- Sidebar -->
+
+       <!-- Page content -->
+      <div id="page-content">
+        <div class="header @@classList">
+  <!-- navbar -->
+  <nav class="navbar-classic navbar navbar-expand-lg">
+    <a id="nav-toggle" href="#"><i
+        data-feather="menu"
+
+        class="nav-icon me-2 icon-xs"></i></a>
+    <div class="ms-lg-3 d-none d-md-none d-lg-block">
+     
+     <h4></h4>
+    </div>
+    <!--Navbar nav -->
+    <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
+      <li class="dropdown stopevent">
+
+
+      </li>
+      <!-- List -->
+      <!-- <li class="dropdown ms-2">
+        <a class="rounded-circle" href="#" role="button" id="dropdownUser"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="">
+            <i class="fas fa-user-circle" style="font-size: 30px;"></i>
+          </div>
+        </a>
+      </li> -->
+    </ul>
+  </nav>
+</div>
+        <!-- Container fluid -->
+        <div class="bg-primary pt-10 pb-10"></div>
+        <div class="container-fluid mt-n22 px-6 mb25">
+          <div class="row mb-30">
+            <div class="col-lg-12 col-md-12 col-12 mt-7">
+              <!-- Page header -->
+              <div>
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="mb-2  row">
+                      <div class="col-md-2">
+                    <img src="https://aurangabadmahapalika.org/dashboard/Amclogo1a.png">
+                      </div>
+                    <div class="col-md-10"><h3 class="mb-0  text-white" style="margin-top: 40px;">Chhatrapati   Municipal Corporation I-MeGS System</h3></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6 ">
+              <!-- card -->
+ 		 <a href="https://amc.aurangabadmahapalika.org/dashboard/login">  
+<!--		<a href="https://aurangabadmahapalika.org:9443/dashboard/login">    -->
+                <div class="card bg-1">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3 ">
+                    <div>
+                      <h4 class="mb-0">Dashboard</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-tachometer-alt fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/TaxCollection"> 
+<!--		<a href="http://43.242.214.64:8080/TaxCollection">  -->
+                <div class="card bg-2">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Property Tax</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                     <i class="fas fa-home fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/Watersupply/login.do">
+                <div class="card bg-3">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Water Tax</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-faucet fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/csms/APP/">
+                <div class="card bg-4">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Mobile App</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fab fa-android fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://www.aurangabadmahapalika.org/">
+                <div class="card bg-5">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Web Portal</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-passport fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+             <a href="https://aurangabadmahapalika.org/csms/"> 
+                <div class="card bg-6">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Grievance Management System</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                     <i class="fas fa-envelope-open-text fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+<!--             <a href="http://43.242.214.64:8080/PIS_AMC/login.do">  -->
+		<a href="https://aurangabadmahapalika.org/PIS_AMC/login.do">
+		<div class="card bg-7">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">HRMS / Establishment/ PIS</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-cog fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+<!--             <a href="http://43.242.214.64:8080/LicenseAmc/login.do">  -->
+
+		<a href="https://aurangabadmahapalika.org/LicenseAmc">
+		<div class="card bg-8">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Licenses (Trade & Others)</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="far fa-id-badge fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </a>
+            </div>
+          
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+<!--              <a href="http://43.242.214.64:8080/Health_Hospital_Mgnt">  -->
+		
+		<a href="https://aurangabadmahapalika.org/Health_Hospital_Mgnt">
+		<div class="card bg-9">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Health & Hospitals</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="far fa-hospital fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/jFAS/login.html">  
+
+<!--		<a href="https://aurangabadmahapalika.org:8443/jFAS/login.html">  -->
+
+<div class="card bg-10">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Accounts & Finance</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-calculator fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/Secretary">  
+
+<!--		<a href="https://aurangabadmahapalika.org:8443/Secretary">   --> 
+              <!-- card -->
+              <div class="card bg-11">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Municipal Secretary</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                     <i class="fas fa-synagogue fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+<!--             <a href="http://43.242.214.64:8080/CFC_AMC/login.do"> <div class="card bg-11a">   -->
+		<a href="https://aurangabadmahapalika.org/CFC_AMC/login.do"> <div class="card bg-11a">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">CFC</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+             <a href="https://crsorgi.gov.in/web/index.php/auth/login"> <div class="card bg-110">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Birth, Death & Marriage Registration</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+             <a href="https://mahavastu.maharashtra.gov.in/"> <div class="card bg-111">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Town Planning / BPMS</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+             <a href="https://aurangabadmahapalika.org/Stores/login.inventory"> <div class="card bg-12">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Stores</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-store fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/NOC"><div class="card bg-13">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Fire & Disaster</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-fire-extinguisher fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/Animal_Husbandary/login.do"><div class="card bg-14">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Animal Husbundary</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fab fa-fort-awesome fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+          <!--    <a href="http://43.242.214.64/Project_Manager/login"><div class="card bg-15"> -->
+ 		  <a href="https://aurangabadmahapalika.org/Project_Manager/login"><div class="card bg-15">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Social Welfare </h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-allergies fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/Women_Child_Development"><div class="card bg-16">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Woman & Child Development</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                     <i class="fas fa-allergies fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/Estate/login.do">
+              <!-- card -->
+              <div class="card  bg-17">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Estate Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-house fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <a href="https://aurangabadmahapalika.org/LCMS/login.do">
+              <!-- card -->
+              <div class="card bg-18">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Legal Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                     <i class="fas fa-balance-scale-right fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card bg-19">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">RTI Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-info-circle fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <a href="https://www.aurangabadmahapalika.org/Drainage/login"> 
+	  <!-- card -->
+              <div class="card bg-20">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Drainage Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-dumpster-fire fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            </div>
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://www.aurangabadmahapalika.org/Encroachment/login">
+              <!-- card -->
+              <div class="card bg-21">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Encroachment Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-clipboard-list fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            </div>
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6 ">
+              <!-- card -->
+              <a href="https://aurangabadmahapalika.org/Aurangabad_Tourism/">
+                <div class="card bg-1">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3 ">
+                    <div>
+                      <h4 class="mb-0">Aurangabad Tourism</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-tachometer-alt fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+
+
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://www.aurangabadmahapalika.org/Education/login">
+              <!-- card -->
+              <div class="card bg-22">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Education Module</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-graduation-cap fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/Swm_Web/login.swm">  
+<!--		<a href="https://aurangabadmahapalika.org:8443/Swm_Web/login.swm"> --> 
+              <!-- card -->
+              <div class="card bg-23">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Solid Waste Management</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-dumpster bs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/BEREAU/login.do">
+              <!-- card -->
+              <div class="card bg-24">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Bureau (Inward Outward)</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-cog bs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            </div>
+
+             <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6 ">
+              <!-- card -->
+<!--              <a href="http://43.242.214.64:8080/DMS-ADMIN"> -->
+		 <a href="https://aurangabadmahapalika.org/DMS-ADMIN">
+                <div class="card bg-1">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3 ">
+                    <div>
+                      <h4 class="mb-0">DMS (Integration)</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-tachometer-alt fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div></a>
+            </div>
+
+             <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/Works_Web"> 
+<!--		<a href="https://aurangabadmahapalika.org:8443/Works_Web"> -->
+              <!-- card -->
+              <div class="card bg-27">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Engineering (Works)</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-cog fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            </div>
+
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <!-- card -->
+              <div class="card bg-25">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Project Manager</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-people-carry fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <a href="https://aurangabadmahapalika.org/Transport/login" >
+              <!-- card -->
+              <div class="card bg-26">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Municipal Transport</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-bus fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              </div>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+<!--              <a href="http://175.101.6.10:7003/VTS/">    -->
+ <a href="https://aurangabadmahapalika.org/VTS/">
+
+
+              <!-- card -->
+              <div class="card bg-27">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">VTS (Vehicle Tracking) System</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-truck fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+              <a href="http://43.242.214.64:8080/Municipal_Utility/login" >
+              <!-- card -->
+              <div class="card bg-28">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">Municipal Utilities</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="bi bi-briefcase fs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/RTS/login.do">
+              <!-- card -->
+              <div class="card bg-17">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0">RTS/RTI</h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-dumpster bs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+             <a href="https://aurangabadmahapalika.org/jFAS/login.html">
+              <!-- card -->
+              <div class="card bg-19">
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading -->
+                  <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <div>
+                      <h4 class="mb-0"> Smart City </h4>
+                    </div>
+                    <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                      <i class="fas fa-dumpster bs-4"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+
+
+          </div>
+          <!-- row  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <!-- Libs JS -->
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="assets/libs/prismjs/prism.js"></script>
+<script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+
+
+<!-- Theme JS -->
+<script src="assets/js/theme.min.js"></script>
+    
+
+
+  </body>
+
+
+<!-- Mirrored from codescandy.com/dashui/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Jan 2022 04:21:24 GMT -->
+</html>
