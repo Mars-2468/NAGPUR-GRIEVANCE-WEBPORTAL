@@ -1,0 +1,34 @@
+### Windows
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+admin/application/cache/*
+!admin/application/cache/index.html
+
+admin/application/logs/*
+!admin/application/logs/index.html
+
+!admin/application/*/.htaccess
+
+grievance/comm_address/*
+grievance/decPhotos/*
+grievance/field_visitor_docs/*
+grievance/grievance/photos/*
+
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
