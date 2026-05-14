@@ -105,7 +105,17 @@ if (isset($_SESSION['uid'])) {
 		printf("Errormessage: %s\n", mysqli_error($conn));
 
 	if(!in_array($user_id,['nagpur','superadmin','admin','CDMA']) && !empty($data['emp_id'])){
-		$sql = "select e.emp_id,e.dept_id,e.desg_id,d.dept_desc,ds.desg_desc from emp_desg_map e,dept_mst d, desg_mst ds where e.dept_id=d.dept_id and e.desg_id=ds.desg_id and emp_id=".$data['emp_id'];
+		//$sql = "select e.emp_id,e.dept_id,e.desg_id,d.dept_desc,ds.desg_desc from emp_desg_map e,dept_mst d, desg_mst ds where e.dept_id=d.dept_id and e.desg_id=ds.desg_id and emp_id=".$data['emp_id'];
+		
+		$sql = "SELECT 
+					e.emp_id,
+					e.dept_id,
+					e.desg_id,
+					d.dept_desc,
+					ds.desg_desc
+				FROM emp_desg_map e, dept_mst d ,  desg_mst ds     
+				WHERE e.dept_id=d.dept_id and e.desg_id=ds.desg_id and e.delete_status=0 and e.emp_id  = ".$data['emp_id']." ";
+		
 		if ($rs = mysqli_query($conn, $sql)) {
 			while ($row = mysqli_fetch_assoc($rs)){
 				$desg_list2[$row['dept_id']]['dept_id'] = $row['dept_desc'];

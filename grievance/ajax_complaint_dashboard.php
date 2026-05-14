@@ -1377,7 +1377,7 @@
 	
 	}
 
-	$sql="SELECT edm.dept_id,edm.desg_id, d.desg_desc,dp.dept_desc FROM `emp_desg_map` edm,desg_mst d,dept_mst dp where edm.desg_id=d.desg_id and edm.dept_id=dp.dept_id and edm.emp_id=".$_SESSION['emp_id'];
+	$sql="SELECT edm.dept_id,edm.desg_id, d.desg_desc,dp.dept_desc FROM `emp_desg_map` edm,desg_mst d,dept_mst dp where edm.desg_id=d.desg_id and edm.dept_id=dp.dept_id and edm.delete_status=0 and edm.emp_id=".$_SESSION['emp_id'];
 	
 	$rs = mysqli_query($conn, $sql);
 	$field_info = mysqli_fetch_fields($rs);
@@ -1388,7 +1388,7 @@
 			//$user_dept_desg_list[$row['desg_id']][$f->name] = $row[$f->name];
 	}
 	
-	//echo "<pre>";print_r($_SESSION);echo "</pre>";die();
+	//echo "<pre>";print_r($employee_dept_desg_list);echo "</pre>";die();
 
 
 	?>
